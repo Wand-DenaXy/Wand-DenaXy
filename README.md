@@ -12,7 +12,7 @@
 
 <h2 align="center">👨🏻‍💻&ensp; <i>Ｐｒｏｊｅｔｏｓ</i> &ensp;👨🏻‍💻</h2>
 <div>
-  <img align="left" height="275px" width="275px" alt="" src="./imagens/wp1885914-unity-wallpapers.jpg" />
+  <img class="res" align="left" height="275px" width="275px" alt="" src="./imagens/wp1885914-unity-wallpapers.jpg" />
   <table height="365px" width="365px">
     <tr>
       <td>
@@ -40,6 +40,7 @@
 <br><br>
 
 <h2 align="center">🛠️&ensp; <i>Ｔｅｃｎｏｌｏｇｉａ s</i> &ensp;🛠️</h2>
+<div class="res"> 
 <img align="left" height="275px" width="275px" alt="" src="./Github-Fotos/Best-Programming-Software-for-Writing-Code.jpg" />
 <table align="right" height="300px" width="275px" style="width: 650px; padding: 10px 0px 10px 10px;">
   <tr>
@@ -75,6 +76,14 @@
         </b>
       </sub>
     </td>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=javascript" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>JavaScript</pre>
+        </b>
+      </sub>
+    </td>
   </tr>
   <tr>
     <td align="center" width="100px;">
@@ -85,11 +94,11 @@
         </b>
       </sub>
     </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=javascript" width="65px" alt=" icon"/><br>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=vscode" width="65px" alt=" icon"/><br>
       <sub>
         <b>
-          <pre>JavaScript</pre>
+          <pre>VsCode</pre>
         </b>
       </sub>
     </td>
@@ -98,6 +107,14 @@
       <sub>
         <b>
           <pre>C#</pre>
+        </b>
+      </sub>
+    </td>
+        <td align="center">
+      <img src="https://skillicons.dev/icons?i=visualstudio" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>Visual Studio</pre>
         </b>
       </sub>
     </td>
@@ -178,8 +195,9 @@
       </sub>
     </td>
   </tr>
-</table> 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <h2 align="center">💬&ensp; <i>Ｃｏｎｔａｔｏ</i> &ensp;💬</h2>
 <img align="left" width="220px" height="220px" src="./Github-Fotos/uwp4640756.png" alt=" coding">
@@ -189,15 +207,19 @@
   <a href="https://portfolio-guga-silva.vercel.app/cv/Curriculo-WebDeveloper-Gustavo-Silva.zip" alt="">
     <img src="./Github-Fotos/button/curriculo.svg" alt="">
   </a>
-  <a href = "manuelsil754@outlook.pt" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
+  <a href = "contatogustavosilva017@outlook.com" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
   </a> 
   <a href="https://portfolio-guga-silva.vercel.app/" alt="" target="_blank">
     <img src="./Github-Fotos/button/portfolio.svg" alt="">
   </a> 
+  <a href="https://www.linkedin.com/in/guga-silva-124706233" alt="" target="_blank">
+    <img src="./Github-Fotos/button/linkedin.svg" alt="">
   </a>
-  <a href="https://wa.me/920170871" alt="" target="_blank">
+  <a href="https://wa.me/558281828018" alt="" target="_blank">
     <img src="./Github-Fotos/button/whatsapp.svg" alt="">
   </a>
+  <a href="https://www.instagram.com/50repolhoscozidos/" alt="" target="_blank">
+    <img src="./Github-Fotos/button/instagram.svg" alt="">
   </a>
   <img src="./Github-Fotos/button/discord.svg" alt="">
 </p>
@@ -221,14 +243,12 @@
 
 <img src="./images/heart.gif" alt="" height="40px" width="40px" />
 <img  src="https://img.shields.io/github/license/Wand-DenaXy/Wand-DenaXy?style=for-the-badge&logo=unlicense&logoColor=lightgrey&color=70A5FD" alt="" height="40px" />
-
-<style>
-@media screen and (max-width: 800px)
-{
-  res
-  {
-    padding-top: -20px;
-    align-items: center;
-  }
-}
-</style>
+    <style>
+        @media screen and (max-width: 800px) {
+            res {
+                display: flex;
+                text-align: center;
+                align-items: center;
+            }   
+          } 
+    </style>
