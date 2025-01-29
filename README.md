@@ -109,16 +109,24 @@
         </b>
       </sub>
     </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=materialui" width="65px" alt=" icon"/><br>
+        <td align="center">
+      <img src="https://skillicons.dev/icons?i=visualstudio" width="65px" alt=" icon"/><br>
       <sub>
         <b>
-          <pre>Material<br>UI</pre>
+          <pre>Visual Studio</pre>
         </b>
       </sub>
     </td>
+            <td align="center">
+      <img src="https://skillicons.dev/icons?i=stackoverflow" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>Stackover Flow</pre>
+        </b>
+      </sub>
+    </td>
+  </tr>
+  <tr>  
     <td align="center">
       <img src="https://skillicons.dev/icons?i=bootstrap" width="65px" alt=" icon"/><br>
       <sub>
