@@ -221,3 +221,14 @@
 
 <img src="./images/heart.gif" alt="" height="40px" width="40px" />
 <img  src="https://img.shields.io/github/license/Wand-DenaXy/Wand-DenaXy?style=for-the-badge&logo=unlicense&logoColor=lightgrey&color=70A5FD" alt="" height="40px" />
+
+<style>
+@media screen and (max-width: 800px)
+{
+  res
+  {
+    padding-top: -20px;
+    align-items: center;
+  }
+}
+</style>
