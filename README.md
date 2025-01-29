@@ -44,40 +44,14 @@
 <table align="right" height="300px" width="275px" style="width: 650px; padding: 10px 0px 10px 10px;">
   <tr>
     <td align="center">
-      <img src="https://skillicons.dev/icons?i=pr" width="65px" alt=" icon"/><br>
+      <img src="https://skillicons.dev/icons?i=mysql" width="65px" alt=" icon"/><br>
       <sub>
         <b>
-          <pre>Premiere Pro</pre>
+          <pre>MYSQL</pre>
         </b>
       </sub>
     </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=styledcomponents" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Styled Components</pre>
-        </b>
-      </sub>
-    </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=unity" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Unity</pre>
-        </b>
-      </sub>
-    </td>
-        </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=visualstudio" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Visual Studio</pre>
-        </b>
-      </sub>
-    </td>
-            </td>
-        <td align="center">
+    <td align="center">
       <img src="https://skillicons.dev/icons?i=ps" width="65px" alt=" icon"/><br>
       <sub>
         <b>
@@ -85,8 +59,7 @@
         </b>
       </sub>
     </td>
-            </td>
-        <td align="center">
+    <td align="center">
       <img src="https://skillicons.dev/icons?i=php" width="65px" alt=" icon"/><br>
       <sub>
         <b>
@@ -94,13 +67,11 @@
         </b>
       </sub>
     </td>
-        </td>
-            </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=mysql" width="65px" alt=" icon"/><br>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=pr" width="65px" alt=" icon"/><br>
       <sub>
         <b>
-          <pre>MYSQL</pre>
+          <pre>Adobe Premiere</pre>
         </b>
       </sub>
     </td>
@@ -114,7 +85,40 @@
     </td>
   </tr>
   <tr>
+    <td align="center" width="100px;">
+      <img src="https://skillicons.dev/icons?i=unity" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>Unity</pre>
+        </b>
+      </sub>
+    </td>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=vscode" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>VsCode</pre>
+        </b>
+      </sub>
+    </td>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=cs" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>C#</pre>
+        </b>
+      </sub>
+    </td>
+  </tr>
   <tr>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=materialui" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>Material<br>UI</pre>
+        </b>
+      </sub>
+    </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=bootstrap" width="65px" alt=" icon"/><br>
       <sub>
@@ -135,7 +139,7 @@
       <img src="https://skillicons.dev/icons?i=html" width="65px" alt=" icon"/><br>
       <sub>
         <b>
-          <pre>HTML5</pre>
+          <pre>HTML</pre>
         </b>
       </sub>
     </td>
@@ -149,6 +153,14 @@
     </td>
   </tr>
   <tr>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=styledcomponents" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>Styled<br>Components</pre>
+        </b>
+      </sub>
+    </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=sass" width="65px" alt=" icon"/><br>
       <sub>
@@ -173,6 +185,7 @@
         </b>
       </sub>
     </td>
+  </tr>
 </table> 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
