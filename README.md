@@ -195,7 +195,7 @@
     </td>
   </tr>
 </table> 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <h2 align="center">💬&ensp; <i>Ｃｏｎｔａｔｏ</i> &ensp;💬</h2>
 <img align="left" width="220px" height="220px" src="./Github-Fotos/uwp4640756.png" alt=" coding">
@@ -205,19 +205,15 @@
   <a href="https://portfolio-guga-silva.vercel.app/cv/Curriculo-WebDeveloper-Gustavo-Silva.zip" alt="">
     <img src="./Github-Fotos/button/curriculo.svg" alt="">
   </a>
-  <a href = "contatogustavosilva017@outlook.com" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
+  <a href = "manuelsil754@outlook.pt" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
   </a> 
   <a href="https://portfolio-guga-silva.vercel.app/" alt="" target="_blank">
     <img src="./Github-Fotos/button/portfolio.svg" alt="">
   </a> 
-  <a href="https://www.linkedin.com/in/guga-silva-124706233" alt="" target="_blank">
-    <img src="./Github-Fotos/button/linkedin.svg" alt="">
   </a>
-  <a href="https://wa.me/558281828018" alt="" target="_blank">
+  <a href="https://wa.me/920170871" alt="" target="_blank">
     <img src="./Github-Fotos/button/whatsapp.svg" alt="">
   </a>
-  <a href="https://www.instagram.com/50repolhoscozidos/" alt="" target="_blank">
-    <img src="./Github-Fotos/button/instagram.svg" alt="">
   </a>
   <img src="./Github-Fotos/button/discord.svg" alt="">
 </p>
