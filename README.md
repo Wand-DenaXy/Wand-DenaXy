@@ -173,13 +173,3 @@
   <img  src="https://img.shields.io/github/license/Wand-DenaXy/Wand-DenaXy?style=for-the-badge&logo=unlicense&logoColor=lightgrey&color=70A5FD" alt="" height="40px" />
 </div>
 
-<style>
-  @media screen and (max-width: 800px) {
-    .res {
-      display: flex;
-      text-align: center;
-      align-items: center;
-    }
-  }
-</style>
-
