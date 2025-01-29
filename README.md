@@ -204,7 +204,7 @@
 <br><br>
 
 <p align="center">
-  <a href="[ManuelSilvestre_Curriclo.pdf](https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf)" alt="">
+  <a href="[ManuelSilvestre_Curriclo.pdf](https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf)" download="[ManuelSilvestre_Curriclo.pdf](https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf)" alt="">
     <img src="./Github-Fotos/button/curriculo.svg" alt="">
   </a>
   <a href = "manuelsil754@outlook.pt" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
