@@ -75,14 +75,6 @@
         </b>
       </sub>
     </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=javascript" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>JavaScript</pre>
-        </b>
-      </sub>
-    </td>
   </tr>
   <tr>
     <td align="center" width="100px;">
@@ -90,6 +82,14 @@
       <sub>
         <b>
           <pre>Unity</pre>
+        </b>
+      </sub>
+    </td>
+        <td align="center">
+      <img src="https://skillicons.dev/icons?i=javascript" width="65px" alt=" icon"/><br>
+      <sub>
+        <b>
+          <pre>JavaScript</pre>
         </b>
       </sub>
     </td>
