@@ -212,7 +212,6 @@
   <img style="border: 1px solid white; border-radius: 4px;" height="203px" src="https://github-readme-streak-stats.herokuapp.com/?user=Wand-DenaXy&theme=tokyonight&hide_border=true">
   <br><br>
 
-  ![Snake animation](https://github.com/Wand-DenaXy/Wand-DenaXy/blob/output/github-snake-dark.svg)
   <br><br>
 </details>
 <br>
