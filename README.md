@@ -209,7 +209,6 @@
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Wand-DenaXy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true">
   <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Wand-DenaXy&layout=compact&langs_count=6&theme=tokyonight">
 
-  <img style="border: 1px solid white; border-radius: 4px;" height="203px" src="https://github-readme-stats.vercel.app/api?username=Wand-DenaXy&show_icons=true&custom_title=GugaS1lva's%20Github%20Stats&theme=tokyonight&hide_border=true">
   <img style="border: 1px solid white; border-radius: 4px;" height="203px" src="https://github-readme-streak-stats.herokuapp.com/?user=Wand-DenaXy&theme=tokyonight&hide_border=true">
   <br><br>
 
