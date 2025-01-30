@@ -188,16 +188,15 @@
 <br><br>
 
 <p align="center">
-  <a href="[ManuelSilvestre_Curriclo.pdf](https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf)" download="[ManuelSilvestre_Curriclo.pdf](https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf)" alt="">
+    <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf" download="ManuelSilvestre_Curriclo.pdf">Do</a>
+
     <img src="./Github-Fotos/button/curriculo.svg" alt="">
   </a>
   <a href = "manuelsil754@outlook.pt" alt="-mail"><img src="./Github-Fotos/button/e-mail.svg" target="_blank">
   </a> 
-  <a href="#" alt="" target="_blank">
-    <img src="./Github-Fotos/button/portfolio.svg" alt="">
   </a> 
   </a>
-  <a href="https://wa.me/558281828018" alt="" target="_blank">
+  <a href="https://wa.me/920170871" alt="" target="_blank">
     <img src="./Github-Fotos/button/whatsapp.svg" alt="">
   </a>
   </a>
