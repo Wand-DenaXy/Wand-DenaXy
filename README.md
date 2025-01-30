@@ -95,14 +95,6 @@
       </sub>
     </td>
     <td align="center">
-      <img src="https://skillicons.dev/icons?i=vscode" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>VsCode</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
       <img src="https://skillicons.dev/icons?i=cs" width="65px" alt=" icon"/><br>
       <sub>
         <b>
@@ -115,14 +107,6 @@
       <sub>
         <b>
           <pre>Visual Studio</pre>
-        </b>
-      </sub>
-    </td>
-            <td align="center">
-      <img src="https://skillicons.dev/icons?i=stackoverflow" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Stackover Flow</pre>
         </b>
       </sub>
     </td>
