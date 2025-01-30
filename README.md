@@ -12,7 +12,7 @@
 
 <h2 align="center">👨🏻‍💻&ensp; <i>Ｐｒｏｊｅｔｏｓ</i> &ensp;👨🏻‍💻</h2>
 <div>
-  <img class="res" align="left" height="275px" width="275px" alt="" src="./imagens/wp1885914-unity-wallpapers.jpg" />
+  <img class="res" align="left" height="275px" width="275px" alt="" src="./imagens/OIG1.jpeg" />
   <table height="365px" width="365px">
     <tr>
       <td>
