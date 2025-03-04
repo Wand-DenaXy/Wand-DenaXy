@@ -20,6 +20,13 @@
       </a>
       </td>
     </tr>
+            <tr>
+      <td>
+      <a href="https://github.com/Wand-DenaXy/Tecnologias" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=ThumbsByManeis&theme=tokyonight&hide_border=true">
+    </a>
+      </td>
+    </tr>
     <tr>
       <td>
       <a href="https://github.com/Wand-DenaXy/WebSite-for-Game" target="_blank">
