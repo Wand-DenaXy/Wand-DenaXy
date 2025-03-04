@@ -2,10 +2,9 @@
 <div align="center">
 
   <ul align="left" style="padding-right: 340px;">
-    <li>☕ Technology, Coffee and Code. ☕</li><br>
-    <li>🚀 Software Engineer 🚀</li><br>
-    <li>💻 Front - Back - Mobile - Desktop - IA - Cyber 💻</li><br>
-    <li><i>🏠 "Well, honestly we're talking about an entity that thrives on slavery, you know, that's not cool. Fun is fun but who cares? I'll be in the garage." 🏠</i></li><br>
+    <li>☕ Technology</li><br>
+      <li>📢 Software Engineer 📢</li><br>
+    <li>💻 Front - Back - Mobile - Desktop 💻</li><br>
   </ul>
   <br><br><br><br>
 </div>
