@@ -30,14 +30,14 @@
     <tr>
       <td>
       <a href="https://github.com/Wand-DenaXy/WebSite-for-Game" target="_blank">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=WebSite-for-Game&theme=tokyonight&hide_border=true">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=Federacao&theme=tokyonight&hide_border=true">
       </a>
       </td>
     </tr>
         <tr>
       <td>
       <a href="https://github.com/Wand-DenaXy/Tecnologias" target="_blank">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=Tecnologias&theme=tokyonight&hide_border=true">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=APP_Android&theme=tokyonight&hide_border=true">
     </a>
       </td>
     </tr>
