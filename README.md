@@ -15,28 +15,21 @@
   <table height="365px" width="365px">
     <tr>
       <td>
-      <a href="https://github.com/Wand-DenaXy/GamePAP" target="_blank">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=GamePAP&theme=tokyonight&hide_border=true">
-      </a>
-      </td>
-    </tr>
-            <tr>
-      <td>
-      <a href="https://github.com/Wand-DenaXy/Tecnologias" target="_blank">
+      <a href="https://github.com/Wand-DenaXy/ThumbsByManeis" target="_blank">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=ThumbsByManeis&theme=tokyonight&hide_border=true">
     </a>
       </td>
     </tr>
     <tr>
       <td>
-      <a href="https://github.com/Wand-DenaXy/WebSite-for-Game" target="_blank">
+      <a href="https://github.com/Wand-DenaXy/Federacao" target="_blank">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=Federacao&theme=tokyonight&hide_border=true">
       </a>
       </td>
     </tr>
         <tr>
       <td>
-      <a href="https://github.com/Wand-DenaXy/Tecnologias" target="_blank">
+      <a href="https://github.com/Wand-DenaXy/APP_Android" target="_blank">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=APP_Android&theme=tokyonight&hide_border=true">
     </a>
       </td>
