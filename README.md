@@ -15,7 +15,7 @@
   <table height="365px" width="365px">
     <tr>
       <td>
-      <a href="https://github.com/PuroEncantoo/PuroEncanto_Temp-Main" target="_blank">
+      <a href="[https://github.com/PuroEncantoo/PuroEncanto_Temp-Main](https://github.com/PuroEncantoo/PuroEncanto_Temp-Main)" target="_blank">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=PuroEncanto&theme=tokyonight&hide_border=true">
     </a>
       </td>
