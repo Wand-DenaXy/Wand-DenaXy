@@ -36,7 +36,7 @@
     </tr>
     <tr>
       <td>
-      <a href="https://github.com/Wand-DenaXy/[FederacaoV2](https://github.com/Wand-DenaXy/FederacaoV2)" target="_blank">
+      <a href="https://github.com/Wand-DenaXy/FederacaoV2" target="_blank">
           <img
     src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=Wand-DenaXy&repo=FederacaoV2&theme=tokyonight&hide_border=true"
     height="275px"
