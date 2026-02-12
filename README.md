@@ -15,33 +15,28 @@
   <table height="365px" width="365px">
     <tr>
       <td>
-      <a href="[https://github.com/PuroEncantoo/PuroEncanto_Temp-Main](https://github.com/PuroEncantoo/PuroEncanto_Temp-Main)" target="_blank">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=PuroEncanto&theme=tokyonight&hide_border=true">
+      <a href="https://github.com/Wand-DenaXy/Federacao" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=Federacao&theme=tokyonight&hide_border=true" height="275px" width="275px" align="center">
     </a>
       </td>
     </tr>
     <tr>
       <td>
-      <a href="https://github.com/Wand-DenaXy/Federacao">
-        <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=Wand-DenaXy&repo=Federacao&theme=tokyonight&hide_border=true">
+      <a href="https://github.com/Wand-DenaXy/[FederacaoV2](https://github.com/Wand-DenaXy/FederacaoV2)" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=FederacaoV2&theme=tokyonight&hide_border=true" height="275px" width="275px" align="center">
       </a>
       </td>
     </tr>
-    <tr>
-      <td>
-<a href="https://github.com/Wand-DenaXy/FederacaoV2" target="_blank">
-  <img 
-    src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=Wand-DenaXy&repo=FederacaoV2&theme=tokyonight&hide_border=true" >
-</a>
-
-      </td>
-    </tr>
         <tr>
-      <td>
-      <a href="https://github.com/Wand-DenaXy/ThumbsByManeis" target="_blank">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=ThumbsByManeis&theme=tokyonight&hide_border=true">
-    </a>
-      </td>
+<td>
+  <a href="https://github.com/Wand-DenaXy/Flutter" target="_blank">
+    <img 
+      src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=Wand-DenaXy&repo=Flutter&theme=tokyonight&hide_border=true" 
+      align="center"
+      height="275px" 
+      width="275px">
+  </a>
+</td>
   </table>
 </div>
 <br><br>
