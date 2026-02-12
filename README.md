@@ -20,6 +20,26 @@
     </a>
       </td>
     </tr>
+    <tr>
+      <td>
+      <a href="https://github.com/Wand-DenaXy/Federacao" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=Federacao&theme=tokyonight&hide_border=true">
+    </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <a href="https://github.com/Wand-DenaXy/[FederacaoV2](https://github.com/Wand-DenaXy/FederacaoV2)" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=FederacaoV2&theme=tokyonight&hide_border=true">
+      </a>
+      </td>
+    </tr>
+        <tr>
+      <td>
+      <a href="https://github.com/Wand-DenaXy/ThumbsByManeis" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=ThumbsByManeis&theme=tokyonight&hide_border=true">
+    </a>
+      </td>
   </table>
 </div>
 <br><br>
