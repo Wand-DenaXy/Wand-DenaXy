@@ -13,6 +13,13 @@
 <div>
   <img class="res" align="left" height="275px" width="275px" alt="" src="./Github-Fotos/OIG1.jpeg" />
   <table height="365px" width="365px">
+  <tr>
+      <td>
+      <a href="https://github.com/Wand-DenaXy/[WeGreen](https://github.com/WeGreenProject/WeGreen-Main)" target="_blank">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Wand-DenaXy&repo=WeGreen&theme=tokyonight&hide_border=true" height="275px" width="275px" align="center">
+    </a>
+      </td>
+    </tr>
     <tr>
       <td>
       <a href="https://github.com/Wand-DenaXy/Federacao" target="_blank">
