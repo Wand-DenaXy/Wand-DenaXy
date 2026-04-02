@@ -59,149 +59,56 @@
 </div>
 <br><br>
 
-<h2 align="center">🛠️&ensp; <i>Ｔｅｃｎｏｌｏｇｉａ s</i> &ensp;🛠️</h2>
-<div class="res"> 
-<img align="left" height="275px" width="275px" alt="" src="./Github-Fotos/Best-Programming-Software-for-Writing-Code.jpg" />
-<table align="right" height="300px" width="275px" style="width: 650px; padding: 10px 0px 10px 10px;">
+<h2 align="center">🛠️&ensp; <i>Ｔｅｃｎｏｌｏｇｉａｓ</i> &ensp;🛠️</h2>
+
+<div align="center">
+
+<table>
   <tr>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=mysql" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>MYSQL</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">🌐 Frontend</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=html,css,javascript&theme=dark" alt="Frontend" /><br>
+        <img src="https://skillicons.dev/icons?i=bootstrap,sass,styledcomponents&theme=dark" alt="Frontend Frameworks" />
+      </div>
     </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=ps" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Adobe Photoshop</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">⚙️ Backend</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=php,mysql,cs&theme=dark" alt="Backend" />
+      </div>
     </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=php" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>PHP</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=pr" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Adobe Premiere</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">🎮 Game Dev</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=unity,cs&theme=dark" alt="Game Dev" />
+      </div>
     </td>
   </tr>
   <tr>
-    <td align="center" width="100px;">
-      <img src="https://skillicons.dev/icons?i=unity" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Unity</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">🎨 Design</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=figma,ps,pr&theme=dark" alt="Design" />
+      </div>
     </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=cs" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>C#</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">🔧 Ferramentas</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=git,github,visualstudio&theme=dark" alt="Tools" />
+      </div>
     </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=visualstudio" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Visual Studio</pre>
-        </b>
-      </sub>
-    </td>
-        <td align="center">
-      <img src="https://skillicons.dev/icons?i=javascript" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>JavaScript</pre>
-        </b>
-      </sub>
-    </td>
-  </tr>
-  <tr>  
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=bootstrap" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Bootstrap</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center" width="100px;">
-      <img src="https://skillicons.dev/icons?i=figma" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Figma</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=html" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>HTML</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=css" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>CSS</pre>
-        </b>
-      </sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=styledcomponents" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Styled<br>Components</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=sass" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>SASS</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=github" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Github</pre>
-        </b>
-      </sub>
-    </td>
-    <td align="center">
-      <img src="https://skillicons.dev/icons?i=git" width="65px" alt=" icon"/><br>
-      <sub>
-        <b>
-          <pre>Git</pre>
-        </b>
-      </sub>
+    <td valign="top" width="33%">
+      <h3 align="center">📱 Mobile</h3>
+      <div align="center">
+        <img src="https://skillicons.dev/icons?i=flutter,dart&theme=dark" alt="Mobile" />
+      </div>
     </td>
   </tr>
 </table>
+
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
 
 <h2 align="center">💬&ensp; <i>Ｃｏｎｔａｔｏ</i> &ensp;💬</h2>
 <img align="left" width="220px" height="220px" src="./Github-Fotos/uwp4640756.png" alt=" coding">
