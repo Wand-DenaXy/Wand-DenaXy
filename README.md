@@ -68,14 +68,16 @@
     <td valign="top" width="33%">
       <h3 align="center">🌐 Frontend</h3>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=html,css,javascript&theme=dark" alt="Frontend" /><br>
-        <img src="https://skillicons.dev/icons?i=bootstrap,sass,styledcomponents&theme=dark" alt="Frontend Frameworks" />
+        <img src="https://skillicons.dev/icons?i=nextjs,nuxtjs,js,ts&theme=dark" alt="Frontend Core" /><br>
+        <img src="https://skillicons.dev/icons?i=jquery,bootstrap,html,css&theme=dark" alt="Frontend Web" /><br>
+        <img src="https://skillicons.dev/icons?i=sass,kotlin&theme=dark" alt="Frontend Extra" />
       </div>
     </td>
     <td valign="top" width="33%">
       <h3 align="center">⚙️ Backend</h3>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=php,mysql,cs&theme=dark" alt="Backend" />
+        <img src="https://skillicons.dev/icons?i=fastapi,python,django&theme=dark" alt="Backend Core" /><br>
+        <img src="https://skillicons.dev/icons?i=php,laravel,mysql,postgres&theme=dark" alt="Backend Data" />
       </div>
     </td>
     <td valign="top" width="33%">
@@ -95,13 +97,25 @@
     <td valign="top" width="33%">
       <h3 align="center">🔧 Ferramentas</h3>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=git,github,visualstudio&theme=dark" alt="Tools" />
+        <img src="https://skillicons.dev/icons?i=git,github,visualstudio,vscode&theme=dark" alt="Tools" />
       </div>
     </td>
     <td valign="top" width="33%">
       <h3 align="center">📱 Mobile</h3>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=flutter,dart&theme=dark" alt="Mobile" />
+        <img src="https://skillicons.dev/icons?i=kotlin,dart,flutter&theme=dark" alt="Mobile" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" valign="top">
+      <h3 align="center">🧩 Conceitos & Arquitetura</h3>
+      <div align="center">
+        <code>API REST</code> &nbsp;
+        <code>RBAC</code> &nbsp;
+        <code>Multi-Tenancy</code> &nbsp;
+        <code>POO</code> &nbsp;
+        <code>API Integration</code>
       </div>
     </td>
   </tr>
