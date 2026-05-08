@@ -45,49 +45,41 @@
 
 <table width="100%">
 <tr>
-<td width="50%" valign="top" align="center">
+<td width="50%" valign="top" align="left">
+### 21 Repositories
 
-### 15 Repositories
-
-- Prefers GPL-3.0 license
-- 2 Releases
+- Prefers No preferred license license
+- 0 Releases
 - 0 Packages
-- 247 MB used
+- 278 MB used
 - 0 Sponsors
-- 25 Stargazers
-- 3 Forkers
-- 5 Watchers
-- 1.40k views in last two weeks
-
+- 3 Stargazers
+- 1 Forkers
+- 8 Watchers
+- 0 views in last two weeks
 </td>
-<td width="50%" valign="top" align="center">
-
+<td width="50%" valign="top" align="left">
 ### 5 Languages
 
 Most used languages
 
-estimation from 12mb of code in 1613 edited files across 381 commits
+estimation from 278mb of code in 2213 edited files across 738 commits
 
+PHP  
+36.79k lines  
+36.07%
 JavaScript  
-13.4k lines  
-56.85%
-
-Python  
-1.90k lines  
-8.07%
-
-Shell  
-937 lines  
-3.2%
-
-HTML  
-4.54k lines  
-24.49%
-
+19.74k lines  
+19.35%
 CSS  
-2.96k lines  
-7.39%
-
+13.99k lines  
+13.72%
+HTML  
+9.26k lines  
+9.08%
+Vue  
+5.59k lines  
+5.48%
 </td>
 </tr>
 </table>
@@ -142,7 +134,7 @@ CSS
 <tr>
 <td width="50%" valign="top">
 
-### [FederaçãoV2](https://github.com/Wand-DenaXy/FederacaoV2)
+### [FederacaoV2](https://github.com/Wand-DenaXy/FederacaoV2)
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
 
 </td>
