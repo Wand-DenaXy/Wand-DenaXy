@@ -21,14 +21,15 @@ from collections import Counter
 import requests
 
 USERNAME = os.environ.get("GH_USERNAME", "Wand-DenaXy")
-TOKEN = os.environ.get("GH_TOKEN", "")
+TOKEN = os.environ.get("GH_TOKEN", "") or os.environ.get("GITHUB_TOKEN", "")
 README = "README.md"
 
 HEADERS = {
-    "Authorization": f"Bearer {TOKEN}",
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
 }
+if TOKEN:
+    HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
 CURATED_PROJECTS = [
     {
@@ -89,14 +90,32 @@ def gh_get(path: str, params: dict | None = None) -> requests.Response:
             print(f"Rate limited; waiting {wait_s}s")
             time.sleep(wait_s)
             continue
+        # Some endpoints can deny fine-grained tokens for user-scoped metadata.
+        # Fallback to unauthenticated request for public data.
+        if TOKEN and resp.status_code in (401, 403):
+            anon_headers = {
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            }
+            anon_resp = requests.get(url, headers=anon_headers, params=params, timeout=20)
+            return anon_resp
         return resp
     return resp
+
+
+def resp_json(resp: requests.Response) -> dict | list:
+    if not resp.content:
+        return []
+    try:
+        return resp.json()
+    except ValueError:
+        return []
 
 
 def gh_json(path: str, params: dict | None = None) -> dict | list:
     resp = gh_get(path, params)
     resp.raise_for_status()
-    return resp.json()
+    return resp_json(resp)
 
 
 def get_user() -> dict:
@@ -111,7 +130,7 @@ def get_repos() -> list[dict]:
             f"/users/{USERNAME}/repos",
             {"type": "public", "per_page": 100, "page": page},
         )
-        if not batch:
+        if not isinstance(batch, list) or not batch:
             break
         repos.extend(batch)
         if len(batch) < 100:
@@ -142,6 +161,14 @@ def pct(value: int, total: int) -> str:
     return f"{(value / total) * 100:.2f}%"
 
 
+def meter(value: int, total: int, width: int = 18) -> str:
+    if total <= 0:
+        return "░" * width
+    filled = int(round((value / total) * width))
+    filled = max(0, min(width, filled))
+    return "█" * filled + "░" * (width - filled)
+
+
 def parse_last_page(link_header: str | None) -> int:
     if not link_header:
         return 1
@@ -155,7 +182,7 @@ def count_releases(owner: str, repo: str) -> int:
         return 0
     if resp.status_code >= 400:
         return 0
-    data = resp.json()
+    data = resp_json(resp)
     if not data:
         return 0
     last_page = parse_last_page(resp.headers.get("Link"))
@@ -164,7 +191,7 @@ def count_releases(owner: str, repo: str) -> int:
     last_resp = gh_get(f"/repos/{owner}/{repo}/releases", {"per_page": 1, "page": last_page})
     if last_resp.status_code >= 400:
         return last_page
-    return (last_page - 1) + len(last_resp.json())
+    return (last_page - 1) + len(resp_json(last_resp))
 
 
 def count_packages() -> int:
@@ -175,7 +202,9 @@ def count_packages() -> int:
             continue
         if resp.status_code >= 400:
             continue
-        items = resp.json()
+        items = resp_json(resp)
+        if not isinstance(items, list):
+            continue
         total += len(items)
         # Rare to exceed 100; if needed, paginate.
         if len(items) == 100:
@@ -184,8 +213,8 @@ def count_packages() -> int:
                 r = gh_get(f"/users/{USERNAME}/packages", {"package_type": pkg_type, "per_page": 100, "page": page})
                 if r.status_code >= 400:
                     break
-                batch = r.json()
-                if not batch:
+                batch = resp_json(r)
+                if not isinstance(batch, list) or not batch:
                     break
                 total += len(batch)
                 if len(batch) < 100:
@@ -202,7 +231,9 @@ def get_total_views_last_14_days(repos: list[dict]) -> int:
         resp = gh_get(f"/repos/{owner}/{name}/traffic/views")
         if resp.status_code >= 400:
             continue
-        payload = resp.json()
+        payload = resp_json(resp)
+        if not isinstance(payload, dict):
+            continue
         total += int(payload.get("count", 0))
     return total
 
@@ -215,7 +246,9 @@ def get_language_totals(repos: list[dict]) -> dict[str, int]:
         resp = gh_get(f"/repos/{owner}/{name}/languages")
         if resp.status_code >= 400:
             continue
-        langs = resp.json()
+        langs = resp_json(resp)
+        if not isinstance(langs, dict):
+            continue
         for lang, b in langs.items():
             totals[lang] = totals.get(lang, 0) + int(b)
     return totals
@@ -226,7 +259,9 @@ def get_repo_commit_count(owner: str, repo: str) -> int:
     resp = gh_get(f"/repos/{owner}/{repo}/contributors", {"per_page": 100, "anon": "true"})
     if resp.status_code >= 400:
         return 0
-    data = resp.json()
+    data = resp_json(resp)
+    if not isinstance(data, list):
+        return 0
     return sum(int(c.get("contributions", 0)) for c in data)
 
 
@@ -234,7 +269,10 @@ def get_repo_file_count(owner: str, repo: str, default_branch: str) -> int:
     resp = gh_get(f"/repos/{owner}/{repo}/git/trees/{default_branch}", {"recursive": "1"})
     if resp.status_code >= 400:
         return 0
-    tree = resp.json().get("tree", [])
+    payload = resp_json(resp)
+    if not isinstance(payload, dict):
+        return 0
+    tree = payload.get("tree", [])
     return sum(1 for item in tree if item.get("type") == "blob")
 
 
@@ -266,7 +304,9 @@ def build_overview(repos: list[dict], user: dict) -> str:
 
         details_resp = gh_get(f"/repos/{owner}/{name}")
         if details_resp.status_code < 400:
-            watchers += int(details_resp.json().get("subscribers_count", 0))
+            details_payload = resp_json(details_resp)
+            if isinstance(details_payload, dict):
+                watchers += int(details_payload.get("subscribers_count", 0))
 
         releases += count_releases(owner, name)
         commits += get_repo_commit_count(owner, name)
@@ -287,50 +327,78 @@ def build_overview(repos: list[dict], user: dict) -> str:
             f"{lang}  \n{compact_number(approx_lines)} lines  \n{pct(b, total_lang_bytes)}"
         )
 
-    left = [
-        f"### {repo_count} Repositories",
-        "",
-        f"- Prefers {top_license} license",
-        f"- {releases} Releases",
-        f"- {packages} Packages",
-        f"- {used_mb:.0f} MB used",
-        "- 0 Sponsors",
-        f"- {stars} Stargazers",
-        f"- {forks} Forkers",
-        f"- {watchers} Watchers",
-        f"- {compact_number(views_2w)} views in last two weeks",
+    if top_license == "No preferred license":
+        license_line = "No preferred license"
+    else:
+        license_line = f"Prefers {top_license}"
+
+    metric_badges = [
+        f"https://img.shields.io/badge/Repositories-{repo_count}-161b22?style=for-the-badge&logo=github&logoColor=58A6FF",
+        f"https://img.shields.io/badge/License-{license_line.replace(' ', '%20')}-161b22?style=for-the-badge&logo=law&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Releases-{releases}-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Packages-{packages}-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Used-{int(round(used_mb))}%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF",
+        "https://img.shields.io/badge/Sponsors-0-161b22?style=for-the-badge&logo=githubsponsors&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Stargazers-{stars}-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Forkers-{forks}-161b22?style=for-the-badge&logo=git&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Watchers-{watchers}-161b22?style=for-the-badge&logo=github&logoColor=58A6FF",
+        f"https://img.shields.io/badge/Views%20(14d)-{compact_number(views_2w)}-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF",
     ]
 
-    right = [
+    language_rows = []
+    for lang, b in top_langs:
+        approx_lines = int(round(b / 30.0))
+        language_rows.append(
+            "| "
+            + f"**{lang}** | {compact_number(approx_lines)} lines | {pct(b, total_lang_bytes)} | `{meter(b, total_lang_bytes)}` |"
+        )
+
+    left_block = [
+        f"### {repo_count} Repositories",
+        "",
+        f"<img src=\"{metric_badges[0]}\" />",
+        f"<img src=\"{metric_badges[1]}\" />",
+        f"<img src=\"{metric_badges[2]}\" />",
+        f"<img src=\"{metric_badges[3]}\" />",
+        f"<img src=\"{metric_badges[4]}\" />",
+        f"<img src=\"{metric_badges[5]}\" />",
+        f"<img src=\"{metric_badges[6]}\" />",
+        f"<img src=\"{metric_badges[7]}\" />",
+        f"<img src=\"{metric_badges[8]}\" />",
+        f"<img src=\"{metric_badges[9]}\" />",
+    ]
+
+    right_block = [
         f"### {len(top_langs)} Languages",
         "",
-        "Most used languages",
+        "**Most used languages**",
         "",
         (
-            f"estimation from {used_mb:.0f}mb of code in {tracked_files} edited files "
-            f"across {commits} commits"
+            f"<sub>estimation from {int(round(used_mb))}mb of code in {tracked_files} edited files "
+            f"across {commits} commits</sub>"
         ),
         "",
-    ] + language_lines
+        "| Language | Lines | Share | Distribution |",
+        "|---|---:|---:|---|",
+        *language_rows,
+    ]
 
-    return "\n".join(
-        [
-            '<div align="center">',
-            "",
-            '<table width="100%">',
-            "<tr>",
-            '<td width="50%" valign="top" align="left">',
-            *left,
-            "</td>",
-            '<td width="50%" valign="top" align="left">',
-            *right,
-            "</td>",
-            "</tr>",
-            "</table>",
-            "",
-            "</div>",
-        ]
-    )
+    return "\n".join([
+        '<div align="center">',
+        "",
+        '<table width="100%">',
+        "<tr>",
+        '<td width="47%" valign="top" align="left">',
+        *left_block,
+        "</td>",
+        '<td width="53%" valign="top" align="left">',
+        *right_block,
+        "</td>",
+        "</tr>",
+        "</table>",
+        "",
+        "</div>",
+    ])
 
 
 def build_projects() -> str:
@@ -388,7 +456,7 @@ def inject_section(content: str, name: str, new_body: str) -> str:
 
 def main() -> None:
     if not TOKEN:
-        sys.exit("GH_TOKEN is not set.")
+        print("[WARN] GH_TOKEN/GITHUB_TOKEN not set. Using unauthenticated GitHub API.")
 
     print(f"Loading GitHub data for {USERNAME}...")
     user = get_user()

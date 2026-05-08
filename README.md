@@ -45,48 +45,37 @@
 
 <table width="100%">
 <tr>
-<td width="50%" valign="top" align="center">
+<td width="47%" valign="top" align="left">
 
 ### 15 Repositories
 
-- Prefers GPL-3.0 license
-- 2 Releases
-- 0 Packages
-- 247 MB used
-- 0 Sponsors
-- 25 Stargazers
-- 3 Forkers
-- 5 Watchers
-- 1.40k views in last two weeks
+<img src="https://img.shields.io/badge/Repositories-15-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/License-GPL--3.0-161b22?style=for-the-badge&logo=law&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Releases-2-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Packages-0-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Used-247%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Sponsors-0-161b22?style=for-the-badge&logo=githubsponsors&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Stargazers-25-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Forkers-3-161b22?style=for-the-badge&logo=git&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Watchers-5-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Views%20(14d)-1.40k-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF" />
 
 </td>
-<td width="50%" valign="top" align="center">
+<td width="53%" valign="top" align="left">
 
 ### 5 Languages
 
-Most used languages
+**Most used languages**
 
-estimation from 12mb of code in 1613 edited files across 381 commits
+<sub>estimation from 12mb of code in 1613 edited files across 381 commits</sub>
 
-JavaScript  
-13.4k lines  
-56.85%
-
-Python  
-1.90k lines  
-8.07%
-
-Shell  
-937 lines  
-3.2%
-
-HTML  
-4.54k lines  
-24.49%
-
-CSS  
-2.96k lines  
-7.39%
+| Language | Lines | Share | Distribution |
+|---|---:|---:|---|
+| **JavaScript** | 13.4k lines | 56.85% | `██████████░░░░░░░░` |
+| **HTML** | 4.54k lines | 24.49% | `████░░░░░░░░░░░░░░` |
+| **Python** | 1.90k lines | 8.07% | `█░░░░░░░░░░░░░░░░░` |
+| **CSS** | 2.96k lines | 7.39% | `█░░░░░░░░░░░░░░░░░` |
+| **Shell** | 937 lines | 3.20% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
@@ -242,34 +231,6 @@ CSS
 
 </div>
 <br><br>
-
-<!-- ──────────────────────── CONTACT ────────────────────────── -->
-
-**`> contact`**
-
-<div align="center">
-
-<img align="left" width="156px" height="156px" src="./Github-Fotos/648032d95e25e55bbdba14c87058568d.jpg" alt="Manuel Silvestre" />
-
-<br/><br/>
-
-<a href="mailto:manuelsil754@outlook.pt">
-  <img src="./Github-Fotos/button/e-mail.svg" height="36" alt="Email" />
-</a>
-&nbsp;&nbsp;
-<a href="https://wa.me/920170871">
-  <img src="./Github-Fotos/button/whatsapp.svg" height="36" alt="WhatsApp" />
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf">
-  <img src="./Github-Fotos/button/curriculo.svg" height="36" alt="Résumé" />
-</a>
-
-<br clear="left"/><br/>
-
-</div>
-
-<br/>
 
 <!-- ──────────────────────── FOOTER ─────────────────────────── -->
 
