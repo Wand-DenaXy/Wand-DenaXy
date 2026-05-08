@@ -97,7 +97,7 @@
 | Forkers | `1` |
 | Watchers | `8` |
 | Views (14d) | `0` |
-| Commits (7d) | `31` |
+| Commits (7d) | `36` |
 
 </td>
 <td width="60%" valign="top" align="center">
