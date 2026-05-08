@@ -46,9 +46,9 @@
 <table width="100%">
 <tr>
 <td width="47%" valign="top" align="left">
-### 22 Repositories
+### 21 Repositories
 
-<img src="https://img.shields.io/badge/Repositories-22-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Repositories-21-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
 <img src="https://img.shields.io/badge/License-No%20preferred%20license-161b22?style=for-the-badge&logo=law&logoColor=58A6FF" />
 <img src="https://img.shields.io/badge/Releases-0-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF" />
 <img src="https://img.shields.io/badge/Packages-0-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF" />
