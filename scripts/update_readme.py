@@ -333,7 +333,9 @@ def build_overview(repos: list[dict], user: dict) -> str:
             + f"**{lang}** | {compact_number(approx_lines)} lines | {pct(b, total_lang_bytes)} | `{meter(b, total_lang_bytes)}` |"
         )
 
-    left_block = [
+    return "\n".join([
+        '<div align="center">',
+        "",
         f"### {repo_count} Repositories",
         "",
         "| Metric | Value |",
@@ -347,9 +349,9 @@ def build_overview(repos: list[dict], user: dict) -> str:
         f"| Forkers | `{forks}` |",
         f"| Watchers | `{watchers}` |",
         f"| Views (14d) | `{compact_number(views_2w)}` |",
-    ]
-
-    right_block = [
+        "",
+        "<br/>",
+        "",
         f"### {len(top_langs)} Languages",
         "",
         "**Most used languages**",
@@ -362,21 +364,6 @@ def build_overview(repos: list[dict], user: dict) -> str:
         "| Language | Lines | Share | Distribution |",
         "|---|---:|---:|---|",
         *language_rows,
-    ]
-
-    return "\n".join([
-        '<div align="center">',
-        "",
-        '<table width="100%">',
-        "<tr>",
-        '<td width="47%" valign="top" align="left">',
-        *left_block,
-        "</td>",
-        '<td width="53%" valign="top" align="left">',
-        *right_block,
-        "</td>",
-        "</tr>",
-        "</table>",
         "",
         "</div>",
     ])

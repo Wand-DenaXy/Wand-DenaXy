@@ -11,47 +11,51 @@
 
 <br/>
 
-<img src="./Github-Fotos/brain.png" width="72" height="72" alt="" />
-
 <table width="92%">
 <tr>
 <td width="64%" valign="middle" align="left">
 
-<br/><br/>
+<h2>Manuel Silvestre</h2>
 
-### Manuel Silvestre
+<p>
+  - Full stack Engineer<br/>
+  - Back end Engineer
+</p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=false&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Building+products+that+scale.;SaaS+%C2%B7+Payments+%C2%B7+Multi-Tenancy;From+schema+to+pixel.)](https://git.io/typing-svg)
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=false&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Building+products+that+scale.;SaaS+%C2%B7+Payments+%C2%B7+Multi-Tenancy;From+schema+to+pixel." alt="Typing SVG" />
+</a>
 
-**Full-Stack Engineer building SaaS, payments and production systems.**
+<p><strong>Full-Stack Engineer building SaaS, payments and production systems.</strong></p>
 
-<br/>
 <sub>FastAPI · Laravel · Stripe · Multi-Tenancy · RBAC · Docker · CI/CD</sub>
 
 <br/><br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&vCenter=true&width=560&lines=From+schema+to+pixel.;Real+integrations%2C+not+toy+apps.;Shipping+systems+that+hold+up.)](https://git.io/typing-svg)
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&vCenter=true&width=560&lines=From+schema+to+pixel.;Real+integrations%2C+not+toy+apps.;Shipping+systems+that+hold+up." alt="Typing SVG" />
+</a>
 
 <br/><br/>
 
 <table width="100%">
-<tr>
-<td align="center" width="33%">
-<sub>Focus</sub><br/>
-<strong>Product Engineering</strong><br/>
-<sub>web · mobile · interactive systems</sub>
-</td>
-<td align="center" width="33%">
-<sub>Core</sub><br/>
-<strong>Backend · SaaS · Payments</strong><br/>
-<sub>PHP · Python · FastAPI · Laravel · Stripe</sub>
-</td>
-<td align="center" width="34%">
-<sub>Architecture</sub><br/>
-<strong>RBAC · Multi-Tenancy · CI/CD</strong><br/>
-<sub>REST APIs · Docker · Redis · automation</sub>
-</td>
-</tr>
+  <tr>
+    <td align="center" width="33%">
+      <sub>Focus</sub><br/>
+      <strong>Product Engineering</strong><br/>
+      <sub>web · mobile · interactive systems</sub>
+    </td>
+    <td align="center" width="33%">
+      <sub>Core</sub><br/>
+      <strong>Backend · SaaS · Payments</strong><br/>
+      <sub>PHP · Python · FastAPI · Laravel · Stripe</sub>
+    </td>
+    <td align="center" width="34%">
+      <sub>Architecture</sub><br/>
+      <strong>RBAC · Multi-Tenancy · CI/CD</strong><br/>
+      <sub>REST APIs · Docker · Redis · automation</sub>
+    </td>
+  </tr>
 </table>
 
 <br/>
@@ -82,11 +86,6 @@
 <!-- START_SECTION:overview -->
 <div align="center">
 
-<table width="100%">
-<tr>
-<td width="47%" valign="top" align="left">
-### 21 Repositories
-
 ### 15 Repositories
 
 | Metric | Value |
@@ -101,8 +100,8 @@
 | Watchers | `5` |
 | Views (14d) | `1.40k` |
 
-</td>
-<td width="53%" valign="top" align="left">
+<br/>
+
 ### 5 Languages
 
 **Most used languages**
@@ -116,10 +115,6 @@
 | **Python** | 1.90k lines | 8.07% | `██░░░░░░░░░░░░░░░░` |
 | **CSS** | 2.96k lines | 7.39% | `█░░░░░░░░░░░░░░░░░` |
 | **Shell** | 937 lines | 3.20% | `█░░░░░░░░░░░░░░░░░` |
-
-</td>
-</tr>
-</table>
 
 </div>
 <!-- END_SECTION:overview -->
@@ -191,15 +186,15 @@
 
 <!-- ──────────────────────── TECH STACK ─────────────────────── -->
 
-<h2 align="center">🛠️&ensp; <i>Ｔｅｃｈ　Ｓｔａｃｋ</i> &ensp;🛠️</h2>
-<p align="center"><sub>Core technologies and architecture patterns I use in production projects.</sub></p>
+<h2 align="center"><i>Tech Stack</i></h2>
+<p align="center"><sub>Core technologies and architecture patterns used in production projects.</sub></p>
 
 <div align="center">
 
-<table>
+<table width="100%">
   <tr>
     <td valign="top" width="33%">
-      <h3 align="center">🌐 Frontend</h3>
+      <h3 align="center">Frontend</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=nextjs,nuxtjs,js,ts&theme=dark" alt="" /><br><br>
@@ -209,7 +204,7 @@
       <br>
     </td>
     <td valign="top" width="33%">
-      <h3 align="center">⚙️ Backend</h3>
+      <h3 align="center">Backend</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=java,fastapi,python,django&theme=dark" alt="" /><br><br>
@@ -218,7 +213,7 @@
       <br>
     </td>
     <td valign="top" width="33%">
-      <h3 align="center">🎮 Game Dev</h3>
+      <h3 align="center">Game Dev</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=unity,cs&theme=dark" alt="" />
@@ -228,7 +223,7 @@
   </tr>
   <tr>
     <td valign="top" width="33%">
-      <h3 align="center">🎨 Design</h3>
+      <h3 align="center">Design</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=figma,ps,pr&theme=dark" alt="" />
@@ -236,7 +231,7 @@
       <br>
     </td>
     <td valign="top" width="33%">
-      <h3 align="center">🔧 Tools</h3>
+      <h3 align="center">Tools</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=git,github,visualstudio,vscode&theme=dark" alt="" />
@@ -244,7 +239,7 @@
       <br>
     </td>
     <td valign="top" width="33%">
-      <h3 align="center">📱 Mobile</h3>
+      <h3 align="center">Mobile</h3>
       <br>
       <div align="center">
         <img src="https://skillicons.dev/icons?i=kotlin,dart,flutter&theme=dark" alt="" />
@@ -254,16 +249,16 @@
   </tr>
   <tr>
     <td colspan="3" valign="top">
-      <h3 align="center">🧩 Concepts & Architecture</h3>
+      <h3 align="center">Concepts & Architecture</h3>
       <br>
       <div align="center">
-        <img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge" alt="REST API" />
-        <img src="https://img.shields.io/badge/RBAC-FF6F00?style=for-the-badge" alt="RBAC" />
-        <img src="https://img.shields.io/badge/Multi--Tenancy-7B1FA2?style=for-the-badge" alt="Multi-Tenancy" />
-        <img src="https://img.shields.io/badge/OOP-0277BD?style=for-the-badge" alt="OOP" />
-        <img src="https://img.shields.io/badge/API_Integration-00897B?style=for-the-badge" alt="API Integration" />
-        <img src="https://img.shields.io/badge/MVC-C62828?style=for-the-badge" alt="MVC" />
-        <img src="https://img.shields.io/badge/MVVM-AD1457?style=for-the-badge" alt="MVVM" />
+        <img src="https://img.shields.io/badge/REST_API-005571?style=flat-square" alt="REST API" />
+        <img src="https://img.shields.io/badge/RBAC-FF6F00?style=flat-square" alt="RBAC" />
+        <img src="https://img.shields.io/badge/Multi--Tenancy-7B1FA2?style=flat-square" alt="Multi-Tenancy" />
+        <img src="https://img.shields.io/badge/OOP-0277BD?style=flat-square" alt="OOP" />
+        <img src="https://img.shields.io/badge/API_Integration-00897B?style=flat-square" alt="API Integration" />
+        <img src="https://img.shields.io/badge/MVC-C62828?style=flat-square" alt="MVC" />
+        <img src="https://img.shields.io/badge/MVVM-AD1457?style=flat-square" alt="MVVM" />
       </div>
       <br>
     </td>
