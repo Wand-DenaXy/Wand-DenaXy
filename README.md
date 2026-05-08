@@ -90,10 +90,10 @@
 
 | Metric | Value |
 |---|---:|
-| License | `GPL-3.0` |
-| Releases | `2` |
+| License | `No preferred license` |
+| Releases | `0` |
 | Packages | `0` |
-| Used Space | `247 MB` |
+| Used Space | `278 MB` |
 | Sponsors | `0` |
 | Stargazers | `25` |
 | Forkers | `3` |
