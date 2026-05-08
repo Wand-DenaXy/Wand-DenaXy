@@ -85,6 +85,7 @@
 <table width="100%">
 <tr>
 <td width="47%" valign="top" align="left">
+### 21 Repositories
 
 ### 15 Repositories
 
@@ -102,12 +103,11 @@
 
 </td>
 <td width="53%" valign="top" align="left">
-
 ### 5 Languages
 
 **Most used languages**
 
-<sub>estimation from 12mb of code in 1613 edited files across 381 commits</sub>
+<sub>estimation from 278mb of code in 2213 edited files across 738 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
