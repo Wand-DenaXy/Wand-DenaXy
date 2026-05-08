@@ -8,15 +8,14 @@ Auto-updates README.md sections between comment markers:
   <!-- END_SECTION:name -->
 
 Sections updated:
-  currently  → 3 most recently pushed repos with time delta
-  overview   → language breakdown badges with live line counts
-  projects   → 2x2 project card table (curated + auto extras)
-  waka       → WakaTime coding time (if WAKATIME_API_KEY is set)
+    currently  → 3 most recently pushed repos with time delta
+    overview   → language breakdown badges with live line counts
+    projects   → executive project card table
+    waka       → GitHub-driven coding rhythm for the last 7 days
 
 Requires env:
   GH_TOKEN       Personal Access Token (repo scope)
   GH_USERNAME    GitHub username
-  WAKATIME_API_KEY  (optional) WakaTime v1 API key
 """
 
 import os
@@ -31,7 +30,6 @@ import requests
 
 USERNAME       = os.environ.get("GH_USERNAME", "Wand-DenaXy")
 TOKEN          = os.environ.get("GH_TOKEN", "")
-WAKA_KEY       = os.environ.get("WAKATIME_API_KEY", "")
 README         = "README.md"
 
 HEADERS = {
@@ -42,7 +40,7 @@ HEADERS = {
 
 IGNORED_REPOS = {USERNAME}  # profile repo itself
 
-# Hand-curated projects — rendered as a 2×2 card table
+# Hand-curated projects — rendered as an executive 2 + 1 layout
 CURATED = [
     {
         "owner": USERNAME,
@@ -89,20 +87,6 @@ CURATED = [
         "snippet": "RBAC · Multi-Tenancy · MVC",
         "ci_badge": "",
     },
-    {
-        "owner": USERNAME,
-        "name": "Flutter",
-        "display": "Flutter",
-        "tagline": "Cross-Platform Mobile",
-        "desc": "Native mobile UI patterns, state management and platform integrations.",
-        "badges": [
-            ("Flutter", "02569B", "flutter", "white"),
-            ("Dart", "0175C2", "dart", "white"),
-            ("Kotlin", "7F52FF", "kotlin", "white"),
-        ],
-        "snippet": "Flutter · Dart · Kotlin",
-        "ci_badge": "",
-    },
 ]
 
 # ── GitHub API helpers ────────────────────────────────────────────────────────
@@ -143,6 +127,13 @@ def get_repo_languages(owner: str, name: str) -> dict[str, int]:
         return gh_get(f"/repos/{owner}/{name}/languages")
     except Exception:
         return {}
+
+
+def get_public_events() -> list[dict]:
+    try:
+        return gh_get(f"/users/{USERNAME}/events/public", {"per_page": 100})
+    except Exception:
+        return []
 
 
 def aggregate_languages(repos: list[dict]) -> list[tuple[str, int]]:
@@ -206,7 +197,7 @@ def build_overview(repos: list[dict]) -> str:
     )
     langs_url = (
         "https://github-readme-stats.vercel.app/api/top-langs/"
-        f"?username={USERNAME}&layout=donut&theme=github_dark"
+        f"?username={USERNAME}&layout=compact&theme=github_dark"
         "&hide_border=true&bg_color=161b22&title_color=58A6FF"
         "&text_color=8b949e&langs_count=8&custom_title=Language+Distribution"
     )
@@ -321,89 +312,54 @@ def _render_project_card(p: dict) -> str:
 
 
 def build_projects(repos: list[dict]) -> str:
-    curated_names = {c["name"] for c in CURATED}
-
-    # Build the 2×2 fixed table
+    # Build the fixed executive table
     cards = [_render_project_card(p) for p in CURATED]
-    # Pad to even count
-    if len(cards) % 2 != 0:
-        cards.append("")
-
-    rows = []
-    for i in range(0, len(cards), 2):
-        left  = cards[i]
-        right = cards[i + 1] if i + 1 < len(cards) else ""
-        rows.append(
-            f'<tr>\n<td width="50%" valign="top">\n\n{left}\n\n</td>\n'
-            f'<td width="50%" valign="top">\n\n{right}\n\n</td>\n</tr>'
-        )
-
-    # Append extra high-starred repos not in curated list
-    extras = sorted(
-        [r for r in repos if r["stargazers_count"] > 0 and r["name"] not in curated_names],
-        key=lambda r: r["stargazers_count"],
-        reverse=True,
-    )[:2]
-
-    extra_rows = ""
-    if extras:
-        ecards = []
-        for repo in extras:
-            lang  = repo.get("language") or "—"
-            badge = _badge(lang, LANG_BADGE_MAP.get(lang, ("888888", lang.lower(), "white"))[0], lang.lower(), "white")
-            desc  = (repo.get("description") or "—")[:80]
-            ecards.append(
-                f"### [{repo['name']}]({repo['html_url']})\n\n"
-                f"{desc}\n\n{badge}\n\n"
-                f"⭐ {repo['stargazers_count']}"
-            )
-        if len(ecards) % 2 != 0:
-            ecards.append("")
-        for i in range(0, len(ecards), 2):
-            left  = ecards[i]
-            right = ecards[i + 1] if i + 1 < len(ecards) else ""
-            rows.append(
-                f'<tr>\n<td width="50%" valign="top">\n\n{left}\n\n</td>\n'
-                f'<td width="50%" valign="top">\n\n{right}\n\n</td>\n</tr>'
-            )
+    rows = [
+        f'<tr>\n<td width="50%" valign="top">\n\n{cards[0]}\n\n</td>\n'
+        f'<td width="50%" valign="top">\n\n{cards[1]}\n\n</td>\n</tr>',
+        f'<tr>\n<td width="50%" valign="top">\n\n{cards[2]}\n\n</td>\n'
+        f'<td width="50%" valign="top"></td>\n</tr>',
+    ]
 
     table = '<div align="center">\n\n<table width="100%">\n' + "\n".join(rows) + "\n</table>\n\n</div>"
     return table
 
 
 def build_waka() -> str:
-    """Return a WakaTime coding-time section if the API key is configured."""
-    if not WAKA_KEY:
-        return "> WakaTime not yet connected — see [SETUP.md](SETUP.md) to enable live coding-time stats."
+    """Return a GitHub-driven coding rhythm section for the last 7 days."""
+    events = get_public_events()
+    now = datetime.now(tz=timezone.utc)
+    recent = []
+    for event in events:
+        created = event.get("created_at")
+        if not created:
+            continue
+        created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+        if (now - created_dt).days <= 7:
+            recent.append(event)
 
-    try:
-        r = requests.get(
-            "https://wakatime.com/api/v1/users/current/stats/last_7_days",
-            headers={"Authorization": f"Basic {WAKA_KEY}"},
-            timeout=10,
-        )
-        r.raise_for_status()
-        data = r.json().get("data", {})
-    except Exception as e:
-        print(f"  [WARN] WakaTime API error: {e}")
-        return "> WakaTime data temporarily unavailable."
+    push_events = [e for e in recent if e.get("type") == "PushEvent"]
+    commit_count = sum(len(e.get("payload", {}).get("commits", [])) for e in push_events)
+    active_repos = sorted({e.get("repo", {}).get("name", "") for e in recent if e.get("repo")})
+    top_repos = active_repos[:3]
 
-    total_sec = data.get("total_seconds", 0)
-    hrs  = int(total_sec // 3600)
-    mins = int((total_sec % 3600) // 60)
-
-    langs = data.get("languages", [])[:5]
-    lang_lines = [
-        f"| {l['name']} | {l['text']} | {l['percent']:.1f}% |"
-        for l in langs
-    ]
+    if not recent:
+        return "<sub>Last 7 days · no public activity returned by the GitHub API yet</sub>"
 
     lines = [
-        f"**Last 7 days** — `{hrs}h {mins}m`",
+        '<div align="center">',
+        f"<sub>Last 7 days · {len(push_events)} pushes · {commit_count} commits · {len(active_repos)} active repos</sub>",
         "",
-        "| Language | Time | % |",
-        "|----------|------|---|",
-    ] + lang_lines
+        "</div>",
+        "",
+    ]
+
+    if top_repos:
+        lines.extend([
+            "| Active Repositories |",
+            "|---------------------|",
+        ])
+        lines.extend([f"| `{repo}` |" for repo in top_repos])
 
     return "\n".join(lines)
 

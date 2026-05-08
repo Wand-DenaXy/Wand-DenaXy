@@ -11,30 +11,25 @@
 
 <br/>
 
-<img src="./Github-Fotos/brain.png" width="72" height="72" alt="" />
+<table width="92%">
+<tr>
+<td width="64%" valign="middle" align="left">
+
+### Manuel Silvestre
+
+**Full-Stack Engineer building SaaS, payments and production systems.**
+
+<sub>FastAPI · Laravel · Stripe · Multi-Tenancy · RBAC · Docker · CI/CD</sub>
 
 <br/><br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Building+products+that+scale.;SaaS+%C2%B7+Payments+%C2%B7+Multi-Tenancy;From+schema+to+pixel.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&vCenter=true&width=560&lines=From+schema+to+pixel.;Real+integrations%2C+not+toy+apps.;Shipping+systems+that+hold+up.)](https://git.io/typing-svg)
 
-<br/>
+</td>
+<td width="36%" valign="middle" align="center">
 
-<table width="84%">
-<tr>
-<td align="center" width="33%">
-<sub>Focus</sub><br/>
-<strong>Product Engineering</strong><br/>
-<sub>web · mobile · interactive systems</sub>
-</td>
-<td align="center" width="33%">
-<sub>Core</sub><br/>
-<strong>Backend · SaaS · Payments</strong><br/>
-<sub>PHP · Python · FastAPI · Laravel · Stripe</sub>
-</td>
-<td align="center" width="33%">
-<sub>Architecture</sub><br/>
-<strong>RBAC · Multi-Tenancy · CI/CD</strong><br/>
-<sub>REST APIs · Docker · Redis · automation</sub>
+<img src="./Github-Fotos/brain.png" width="150" alt="" />
+
 </td>
 </tr>
 </table>
@@ -56,8 +51,6 @@
 <td width="52%" valign="top">
 
 **`> whoami`**
-
-<img align="right" src="./Github-Fotos/brain.png" width="44" />
 
 Software engineer who builds complete, production-grade products — from database schema to pixel-perfect UI. Full stack: web, mobile and game engines.
 
@@ -214,22 +207,7 @@ RBAC · Multi-Tenancy · MVC
 ```
 
 </td>
-<td width="50%" valign="top">
-
-### [Flutter](https://github.com/Wand-DenaXy/Flutter)
-**Cross-Platform Mobile**
-
-Native mobile UI patterns, state management and platform integrations.
-
-<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
-<img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" />
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
-
-```
-Flutter · Dart · Kotlin
-```
-
-</td>
+<td width="50%" valign="top"></td>
 </tr>
 </table>
 
@@ -259,23 +237,27 @@ Flutter · Dart · Kotlin
 
 <br/>
 
+<!-- ───────────────────── CODING RHYTHM ─────────────────────── -->
+
+**`> coding rhythm`**
+
+<!-- START_SECTION:waka -->
+<sub>Last 7 days · activity sync pending</sub>
+<!-- END_SECTION:waka -->
+
+<br/>
+
 <!-- ──────────────────────── CONTACT ────────────────────────── -->
 
 **`> contact`**
 
 <div align="center">
 
-<a href="mailto:manuelsil754@outlook.pt">
-  <img src="./Github-Fotos/button/e-mail.svg" height="36" alt="Email" />
-</a>
-&nbsp;&nbsp;
-<a href="https://wa.me/920170871">
-  <img src="./Github-Fotos/button/whatsapp.svg" height="36" alt="WhatsApp" />
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf">
-  <img src="./Github-Fotos/button/curriculo.svg" height="36" alt="Résumé" />
-</a>
+<a href="mailto:manuelsil754@outlook.pt">email</a>
+&nbsp;/&nbsp;
+<a href="https://wa.me/920170871">whatsapp</a>
+&nbsp;/&nbsp;
+<a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf">resume</a>
 
 </div>
 
