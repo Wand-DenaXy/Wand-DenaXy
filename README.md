@@ -63,6 +63,11 @@ I value clean architecture, minimal interfaces, and software that actually ships
 - 📱 Shipping cross-platform mobile with Flutter
 - 🎮 Exploring procedural systems in Unity
 - ⚡ Automating this very profile with GitHub Actions
+
+**Recent pushes:**
+- [`-Manueli-s-Clubes`](https://github.com/Wand-DenaXy/-Manueli-s-Clubes) — today
+- [`PAP-manga`](https://github.com/Wand-DenaXy/PAP-manga) — 20d ago
+- [`HomemMedio`](https://github.com/Wand-DenaXy/HomemMedio) — 20d ago
 <!-- END_SECTION:currently -->
 
 </td>
@@ -98,36 +103,36 @@ I value clean architecture, minimal interfaces, and software that actually ships
 <table width="88%">
 <tr>
 <td align="center" width="33%">
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" /><br/>
+  <sub><code>33.58%</code> &nbsp; 523.5k lines</sub>
+</td>
+<td align="center" width="33%">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /><br/>
-  <sub><code>56.85%</code> &nbsp; 13.4k lines</sub>
+  <sub><code>22.43%</code> &nbsp; 349.7k lines</sub>
 </td>
 <td align="center" width="33%">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" /><br/>
-  <sub><code>24.49%</code> &nbsp; 4.54k lines</sub>
-</td>
-<td align="center" width="33%">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /><br/>
-  <sub><code>8.07%</code> &nbsp; 1.90k lines</sub>
+  <img src="https://img.shields.io/badge/Vue-888888?style=flat-square&logo=vue&logoColor=white" /><br/>
+  <sub><code>10.75%</code> &nbsp; 167.6k lines</sub>
 </td>
 </tr>
 <tr>
 <td align="center" width="33%">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" /><br/>
-  <sub><code>7.39%</code> &nbsp; 2.96k lines</sub>
+  <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" /><br/>
+  <sub><code>10.41%</code> &nbsp; 162.3k lines</sub>
 </td>
 <td align="center" width="33%">
-  <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnubash&logoColor=white" /><br/>
-  <sub><code>3.20%</code> &nbsp; 937 lines</sub>
+  <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" /><br/>
+  <sub><code>7.97%</code> &nbsp; 124.2k lines</sub>
 </td>
 <td align="center" width="33%">
-  <img src="https://img.shields.io/badge/PHP%20%2F%20More-777BB4?style=flat-square&logo=php&logoColor=white" /><br/>
-  <sub><code>+more</code> &nbsp; across 15 repos</sub>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /><br/>
+  <sub><code>5.92%</code> &nbsp; 92.2k lines</sub>
 </td>
 </tr>
 </table>
 
 <br/>
-<sub>12mb of code · 1613 edited files · 381 commits · 25 stargazers · 1.40k views/2 weeks</sub>
+<sub>1,522kb of code · 15 public repos · 3 stargazers</sub>
 
 </div>
 <!-- END_SECTION:overview -->
@@ -170,11 +175,7 @@ I value clean architecture, minimal interfaces, and software that actually ships
 
 Real Stripe payments, async Celery webhooks, multi-tenancy, RBAC and CI with 84% coverage.
 
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Nuxt_4-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Nuxt_4-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
 
 ```
 34 endpoints · 72 tests · 84% coverage
@@ -192,11 +193,7 @@ RBAC + Multi-Tenancy · Rate limiting
 
 Cart + subscriptions + refunds via Stripe, dynamic commissions, 5-tier gamified ranking, Leaflet map, 25 email templates.
 
-<img src="https://img.shields.io/badge/PHP_8-777BB4?style=flat-square&logo=php&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
-<img src="https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white" />
-<img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" />
+<img src="https://img.shields.io/badge/PHP_8-777BB4?style=flat-square&logo=php&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" /> <img src="https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white" /> <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" />
 
 ```
 38 controllers · 40 models · 30+ pages
@@ -214,8 +211,7 @@ Dynamic commissions (4–6%) · Ranking tiers
 
 Rebuilt from scratch with multi-tenancy and RBAC architecture.
 
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
 
 ```
 RBAC · Multi-Tenancy · MVC
@@ -229,13 +225,35 @@ RBAC · Multi-Tenancy · MVC
 
 Native mobile UI patterns, state management and platform integrations.
 
-<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
-<img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" />
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
+<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" /> <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" /> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
 
 ```
 Flutter · Dart · Kotlin
 ```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [Federacao](https://github.com/Wand-DenaXy/Federacao)
+
+Nova Funcionalidade Implementa, ControllerBase
+
+<img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white" />
+
+⭐ 1
+
+</td>
+<td width="50%" valign="top">
+
+### [GamePAP](https://github.com/Wand-DenaXy/GamePAP)
+
+My Game Finished
+
+<img src="https://img.shields.io/badge/—-888888?style=flat-square&logo=—&logoColor=white" />
+
+⭐ 1
 
 </td>
 </tr>
