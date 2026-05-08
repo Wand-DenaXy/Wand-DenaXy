@@ -11,26 +11,65 @@
 
 <br/>
 
-<img src="./Github-Fotos/brain.png" width="84" height="84" alt="" />
+<img src="./Github-Fotos/brain.png" width="72" height="72" alt="" />
+
+<table width="92%">
+<tr>
+<td width="64%" valign="middle" align="left">
 
 <br/><br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=30&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=780&lines=Manuel+Silvestre;Software+Engineer+%C2%B7+Product+Builder;SaaS+%C2%B7+Payments+%C2%B7+Systems+Architecture)](https://git.io/typing-svg)
+### Manuel Silvestre
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=false&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Building+products+that+scale.;SaaS+%C2%B7+Payments+%C2%B7+Multi-Tenancy;From+schema+to+pixel.)](https://git.io/typing-svg)
+
+**Full-Stack Engineer building SaaS, payments and production systems.**
+
+<br/>
+<sub>FastAPI · Laravel · Stripe · Multi-Tenancy · RBAC · Docker · CI/CD</sub>
+
+<br/><br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&vCenter=true&width=560&lines=From+schema+to+pixel.;Real+integrations%2C+not+toy+apps.;Shipping+systems+that+hold+up.)](https://git.io/typing-svg)
+
+<br/><br/>
+
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+<sub>Focus</sub><br/>
+<strong>Product Engineering</strong><br/>
+<sub>web · mobile · interactive systems</sub>
+</td>
+<td align="center" width="33%">
+<sub>Core</sub><br/>
+<strong>Backend · SaaS · Payments</strong><br/>
+<sub>PHP · Python · FastAPI · Laravel · Stripe</sub>
+</td>
+<td align="center" width="34%">
+<sub>Architecture</sub><br/>
+<strong>RBAC · Multi-Tenancy · CI/CD</strong><br/>
+<sub>REST APIs · Docker · Redis · automation</sub>
+</td>
+</tr>
+</table>
 
 <br/>
 
-<p align="center">
+<p align="left">
   <a href="mailto:manuelsil754@outlook.pt"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=microsoftoutlook&logoColor=58A6FF" /></a>&nbsp;
   <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=25D366" /></a>&nbsp;
   <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf"><img src="https://img.shields.io/badge/Résumé-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
 </p>
 
-<br/>
+</td>
+<td width="36%" valign="middle" align="center">
 
-```
-  Building production-grade products end-to-end.
-  Architecture-first mindset. Real-world delivery.
-```
+<img src="./Github-Fotos/brain.png" width="150" alt="" />
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -49,16 +88,17 @@
 
 ### 15 Repositories
 
-<img src="https://img.shields.io/badge/Repositories-15-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/License-GPL--3.0-161b22?style=for-the-badge&logo=law&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Releases-2-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Packages-0-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Used-247%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Sponsors-0-161b22?style=for-the-badge&logo=githubsponsors&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Stargazers-25-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Forkers-3-161b22?style=for-the-badge&logo=git&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Watchers-5-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Views%20(14d)-1.40k-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF" />
+| Metric | Value |
+|---|---:|
+| License | `GPL-3.0` |
+| Releases | `2` |
+| Packages | `0` |
+| Used Space | `247 MB` |
+| Sponsors | `0` |
+| Stargazers | `25` |
+| Forkers | `3` |
+| Watchers | `5` |
+| Views (14d) | `1.40k` |
 
 </td>
 <td width="53%" valign="top" align="left">
@@ -71,9 +111,9 @@
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **JavaScript** | 13.4k lines | 56.85% | `██████████░░░░░░░░` |
-| **HTML** | 4.54k lines | 24.49% | `████░░░░░░░░░░░░░░` |
-| **Python** | 1.90k lines | 8.07% | `█░░░░░░░░░░░░░░░░░` |
+| **JavaScript** | 13.4k lines | 56.85% | `███████████░░░░░░░` |
+| **HTML** | 4.54k lines | 24.49% | `█████░░░░░░░░░░░░░` |
+| **Python** | 1.90k lines | 8.07% | `██░░░░░░░░░░░░░░░░` |
 | **CSS** | 2.96k lines | 7.39% | `█░░░░░░░░░░░░░░░░░` |
 | **Shell** | 937 lines | 3.20% | `█░░░░░░░░░░░░░░░░░` |
 
@@ -152,6 +192,7 @@
 <!-- ──────────────────────── TECH STACK ─────────────────────── -->
 
 <h2 align="center">🛠️&ensp; <i>Ｔｅｃｈ　Ｓｔａｃｋ</i> &ensp;🛠️</h2>
+<p align="center"><sub>Core technologies and architecture patterns I use in production projects.</sub></p>
 
 <div align="center">
 
@@ -161,9 +202,9 @@
       <h3 align="center">🌐 Frontend</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=nextjs,nuxtjs,js,ts&theme=dark" alt="Frontend Core" /><br><br>
-        <img src="https://skillicons.dev/icons?i=jquery,bootstrap,html,css&theme=dark" alt="Frontend Web" /><br><br>
-        <img src="https://skillicons.dev/icons?i=sass,kotlin&theme=dark" alt="Frontend Extra" />
+        <img src="https://skillicons.dev/icons?i=nextjs,nuxtjs,js,ts&theme=dark" alt="" /><br><br>
+        <img src="https://skillicons.dev/icons?i=jquery,bootstrap,html,css&theme=dark" alt="" /><br><br>
+        <img src="https://skillicons.dev/icons?i=sass,kotlin&theme=dark" alt="" />
       </div>
       <br>
     </td>
@@ -171,8 +212,8 @@
       <h3 align="center">⚙️ Backend</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=java,fastapi,python,django&theme=dark" alt="Backend Core" /><br><br>
-        <img src="https://skillicons.dev/icons?i=php,laravel,mysql,postgres&theme=dark" alt="Backend Data" />
+        <img src="https://skillicons.dev/icons?i=java,fastapi,python,django&theme=dark" alt="" /><br><br>
+        <img src="https://skillicons.dev/icons?i=php,laravel,mysql,postgres&theme=dark" alt="" />
       </div>
       <br>
     </td>
@@ -180,7 +221,7 @@
       <h3 align="center">🎮 Game Dev</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=unity,cs&theme=dark" alt="Game Dev" />
+        <img src="https://skillicons.dev/icons?i=unity,cs&theme=dark" alt="" />
       </div>
       <br>
     </td>
@@ -190,7 +231,7 @@
       <h3 align="center">🎨 Design</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=figma,ps,pr&theme=dark" alt="Design" />
+        <img src="https://skillicons.dev/icons?i=figma,ps,pr&theme=dark" alt="" />
       </div>
       <br>
     </td>
@@ -198,7 +239,7 @@
       <h3 align="center">🔧 Tools</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=git,github,visualstudio,vscode&theme=dark" alt="Tools" />
+        <img src="https://skillicons.dev/icons?i=git,github,visualstudio,vscode&theme=dark" alt="" />
       </div>
       <br>
     </td>
@@ -206,7 +247,7 @@
       <h3 align="center">📱 Mobile</h3>
       <br>
       <div align="center">
-        <img src="https://skillicons.dev/icons?i=kotlin,dart,flutter&theme=dark" alt="Mobile" />
+        <img src="https://skillicons.dev/icons?i=kotlin,dart,flutter&theme=dark" alt="" />
       </div>
       <br>
     </td>

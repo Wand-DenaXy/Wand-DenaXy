@@ -320,30 +320,10 @@ def build_overview(repos: list[dict], user: dict) -> str:
     total_lang_bytes = sum(lang_totals.values())
     top_langs = sorted(lang_totals.items(), key=lambda x: x[1], reverse=True)[:5]
 
-    language_lines = []
-    for lang, b in top_langs:
-        approx_lines = int(round(b / 30.0))
-        language_lines.append(
-            f"{lang}  \n{compact_number(approx_lines)} lines  \n{pct(b, total_lang_bytes)}"
-        )
-
     if top_license == "No preferred license":
-        license_line = "No preferred license"
+        license_value = "No preferred license"
     else:
-        license_line = f"Prefers {top_license}"
-
-    metric_badges = [
-        f"https://img.shields.io/badge/Repositories-{repo_count}-161b22?style=for-the-badge&logo=github&logoColor=58A6FF",
-        f"https://img.shields.io/badge/License-{license_line.replace(' ', '%20')}-161b22?style=for-the-badge&logo=law&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Releases-{releases}-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Packages-{packages}-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Used-{int(round(used_mb))}%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF",
-        "https://img.shields.io/badge/Sponsors-0-161b22?style=for-the-badge&logo=githubsponsors&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Stargazers-{stars}-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Forkers-{forks}-161b22?style=for-the-badge&logo=git&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Watchers-{watchers}-161b22?style=for-the-badge&logo=github&logoColor=58A6FF",
-        f"https://img.shields.io/badge/Views%20(14d)-{compact_number(views_2w)}-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF",
-    ]
+        license_value = top_license
 
     language_rows = []
     for lang, b in top_langs:
@@ -356,16 +336,17 @@ def build_overview(repos: list[dict], user: dict) -> str:
     left_block = [
         f"### {repo_count} Repositories",
         "",
-        f"<img src=\"{metric_badges[0]}\" />",
-        f"<img src=\"{metric_badges[1]}\" />",
-        f"<img src=\"{metric_badges[2]}\" />",
-        f"<img src=\"{metric_badges[3]}\" />",
-        f"<img src=\"{metric_badges[4]}\" />",
-        f"<img src=\"{metric_badges[5]}\" />",
-        f"<img src=\"{metric_badges[6]}\" />",
-        f"<img src=\"{metric_badges[7]}\" />",
-        f"<img src=\"{metric_badges[8]}\" />",
-        f"<img src=\"{metric_badges[9]}\" />",
+        "| Metric | Value |",
+        "|---|---:|",
+        f"| License | `{license_value}` |",
+        f"| Releases | `{releases}` |",
+        f"| Packages | `{packages}` |",
+        f"| Used Space | `{int(round(used_mb))} MB` |",
+        "| Sponsors | `0` |",
+        f"| Stargazers | `{stars}` |",
+        f"| Forkers | `{forks}` |",
+        f"| Watchers | `{watchers}` |",
+        f"| Views (14d) | `{compact_number(views_2w)}` |",
     ]
 
     right_block = [
