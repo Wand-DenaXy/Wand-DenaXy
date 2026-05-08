@@ -254,6 +254,30 @@ def get_language_totals(repos: list[dict]) -> dict[str, int]:
     return totals
 
 
+def get_commits_last_7_days(repos: list[dict]) -> int:
+    from datetime import datetime, timezone, timedelta
+    since = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    total = 0
+    for repo in repos:
+        owner = repo.get("owner", {}).get("login", USERNAME)
+        name = repo["name"]
+        resp = gh_get(
+            f"/repos/{owner}/{name}/commits",
+            {"since": since, "author": USERNAME, "per_page": 1},
+        )
+        if resp.status_code >= 400:
+            continue
+        data = resp_json(resp)
+        if not isinstance(data, list):
+            continue
+        link = resp.headers.get("Link")
+        if link:
+            total += parse_last_page(link)
+        else:
+            total += len(data)
+    return total
+
+
 def get_repo_commit_count(owner: str, repo: str) -> int:
     # Uses contributor totals as a robust commit approximation without fetching every commit detail.
     resp = gh_get(f"/repos/{owner}/{repo}/contributors", {"per_page": 100, "anon": "true"})
@@ -314,6 +338,7 @@ def build_overview(repos: list[dict], user: dict) -> str:
 
     packages = count_packages()
     views_2w = get_total_views_last_14_days(repos)
+    commits_7d = get_commits_last_7_days(repos)
     top_license = preferred_license(repos)
 
     lang_totals = get_language_totals(repos)
@@ -349,6 +374,7 @@ def build_overview(repos: list[dict], user: dict) -> str:
         f"| Forkers | `{forks}` |",
         f"| Watchers | `{watchers}` |",
         f"| Views (14d) | `{compact_number(views_2w)}` |",
+        f"| Commits (7d) | `{commits_7d}` |",
         "",
         "<br/>",
         "",
