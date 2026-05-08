@@ -2,10 +2,9 @@ name: Update README
 
 on:
   schedule:
-    - cron: "0 0 * * *"       # Daily at midnight UTC
+    - cron: "0 */6 * * *"      # Every 6 hours
   push:
     branches: [main]
-  create:                      # Fires when a new repo/branch is created
   workflow_dispatch:           # Manual trigger
 
 jobs:
