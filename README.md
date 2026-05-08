@@ -99,7 +99,7 @@ I value clean architecture, minimal interfaces, and software that actually ships
 </td>
 <td width="50%" valign="top" align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Wand-DenaXy&layout=donut&theme=github_dark&hide_border=true&bg_color=161b22&title_color=58A6FF&text_color=8b949e&langs_count=8&custom_title=Language+Distribution" width="100%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Wand-DenaXy&layout=compact&theme=github_dark&hide_border=true&bg_color=161b22&title_color=58A6FF&text_color=8b949e&langs_count=8&custom_title=Language+Distribution" width="100%" />
 
 </td>
 </tr>
@@ -143,26 +143,6 @@ I value clean architecture, minimal interfaces, and software that actually ships
 
 </div>
 <!-- END_SECTION:overview -->
-
-<br/>
-
-<!-- ───────────────────────── STREAK ────────────────────────── -->
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Wand-DenaXy&theme=github-dark-blue&hide_border=true&background=161b22&ring=58A6FF&fire=FF6B6B&currStreakLabel=58A6FF" />
-
-</div>
-
-<br/>
-
-<!-- ─────────────────────── ACTIVITY GRAPH ───────────────────── -->
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Wand-DenaXy&theme=github-compact&bg_color=0d1117&color=58A6FF&line=58A6FF&point=ffffff&area=true&hide_border=true)](https://github.com/Wand-DenaXy)
-
-</div>
 
 <br/>
 
@@ -258,78 +238,24 @@ Flutter · Dart · Kotlin
 
 <br/>
 
-<!-- ──────────────────────── TECH STACK ─────────────────────── -->
+<!-- ───────────────────── CORE CAPABILITIES ─────────────────── -->
 
-**`> stack`**
+**`> capabilities`**
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="25%">
-
-**Frontend**
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=nextjs,nuxtjs,ts,js&theme=dark&perline=4" />
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=html,css,sass,bootstrap&theme=dark&perline=4" />
-
-</td>
-<td align="center" width="25%">
-
-**Backend**
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=php,laravel,python,fastapi&theme=dark&perline=4" />
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=java,django,mysql,postgres&theme=dark&perline=4" />
-
-</td>
-<td align="center" width="25%">
-
-**Mobile & Game**
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=flutter,dart,kotlin&theme=dark&perline=4" />
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=unity,cs&theme=dark&perline=4" />
-
-</td>
-<td align="center" width="25%">
-
-**Tooling**
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=git,github,docker,redis&theme=dark&perline=4" />
-<br/><br/>
-<img src="https://skillicons.dev/icons?i=vscode,figma,ps,pr&theme=dark&perline=4" />
-
-</td>
-</tr>
-</table>
-
-<br/>
-
 <sub>
-  <code>REST API</code> &nbsp;·&nbsp;
+  <code>SaaS Architecture</code> &nbsp;·&nbsp;
+  <code>Stripe Payments</code> &nbsp;·&nbsp;
   <code>RBAC</code> &nbsp;·&nbsp;
   <code>Multi-Tenancy</code> &nbsp;·&nbsp;
-  <code>OOP</code> &nbsp;·&nbsp;
-  <code>MVC</code> &nbsp;·&nbsp;
-  <code>MVVM</code> &nbsp;·&nbsp;
-  <code>Stripe Payments</code> &nbsp;·&nbsp;
-  <code>CI/CD</code> &nbsp;·&nbsp;
-  <code>Docker</code>
+  <code>REST APIs</code> &nbsp;·&nbsp;
+  <code>Docker</code> &nbsp;·&nbsp;
+  <code>Redis</code> &nbsp;·&nbsp;
+  <code>CI/CD</code>
 </sub>
 
 </div>
-
-<br/>
-
-<!-- ──────────────────── WAKA / CODING TIME ─────────────────── -->
-
-**`> coding time`**
-
-<!-- START_SECTION:waka -->
-> WakaTime not yet connected — see [SETUP.md](SETUP.md) to enable live coding-time stats.
-<!-- END_SECTION:waka -->
 
 <br/>
 
@@ -338,10 +264,6 @@ Flutter · Dart · Kotlin
 **`> contact`**
 
 <div align="center">
-
-<img align="left" width="156px" height="156px" src="./Github-Fotos/648032d95e25e55bbdba14c87058568d.jpg" alt="Manuel Silvestre" />
-
-<br/><br/>
 
 <a href="mailto:manuelsil754@outlook.pt">
   <img src="./Github-Fotos/button/e-mail.svg" height="36" alt="Email" />
@@ -354,8 +276,6 @@ Flutter · Dart · Kotlin
 <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf">
   <img src="./Github-Fotos/button/curriculo.svg" height="36" alt="Résumé" />
 </a>
-
-<br clear="left"/><br/>
 
 </div>
 
