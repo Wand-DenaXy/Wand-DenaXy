@@ -131,7 +131,7 @@
 <tr>
 <td width="50%" valign="top">
 
-### [FederaçãoV2](https://github.com/Wand-DenaXy/FederacaoV2)
+### [FederacaoV2](https://github.com/Wand-DenaXy/FederacaoV2)
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
 
 </td>
