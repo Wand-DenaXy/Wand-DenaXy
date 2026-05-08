@@ -57,8 +57,6 @@
       <a href="mailto:manelocassil69@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=microsoftoutlook&logoColor=58A6FF" /></a>&nbsp;
       <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=25D366" /></a>&nbsp;
       <a href="https://github.com/user-attachments/files/27531128/Manuel_Silvestre_Curriclo_Ingles.pdf"><img src="https://img.shields.io/badge/CV-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
-
-    </td>
   </tr>
 </table>
 
