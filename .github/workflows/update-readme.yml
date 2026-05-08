@@ -2,9 +2,10 @@ name: Update README
 
 on:
   schedule:
-    - cron: "0 */6 * * *"      # Every 6 hours
+    - cron: "0 0 * * *"       # Daily at midnight UTC
   push:
     branches: [main]
+  create:                      # Fires when a new repo/branch is created
   workflow_dispatch:           # Manual trigger
 
 jobs:
@@ -39,6 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: Wand-DenaXy
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: python scripts/update_readme.py
 
       - name: Commit changes
