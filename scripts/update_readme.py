@@ -1,38 +1,28 @@
 """
-update_readme.py
-────────────────
-Auto-updates README.md sections between comment markers:
+Dynamic README updater for GitHub profile.
 
-  <!-- START_SECTION:name -->
-  ...dynamic content...
-  <!-- END_SECTION:name -->
+Updates sections between markers:
+  <!-- START_SECTION:overview --> ... <!-- END_SECTION:overview -->
+  <!-- START_SECTION:projects --> ... <!-- END_SECTION:projects -->
 
-Sections updated:
-  currently  → 3 most recently pushed repos with time delta
-  overview   → language breakdown badges with live line counts
-  projects   → 2x2 project card table (curated + auto extras)
-  waka       → WakaTime coding time (if WAKATIME_API_KEY is set)
-
-Requires env:
-  GH_TOKEN       Personal Access Token (repo scope)
-  GH_USERNAME    GitHub username
-  WAKATIME_API_KEY  (optional) WakaTime v1 API key
+Required env:
+  GH_TOKEN
+  GH_USERNAME
 """
+
+from __future__ import annotations
 
 import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from collections import Counter
 
 import requests
 
-# ── Config ───────────────────────────────────────────────────────────────────
-
-USERNAME       = os.environ.get("GH_USERNAME", "Wand-DenaXy")
-TOKEN          = os.environ.get("GH_TOKEN", "")
-WAKA_KEY       = os.environ.get("WAKATIME_API_KEY", "")
-README         = "README.md"
+USERNAME = os.environ.get("GH_USERNAME", "Wand-DenaXy")
+TOKEN = os.environ.get("GH_TOKEN", "")
+README = "README.md"
 
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
@@ -40,16 +30,11 @@ HEADERS = {
     "X-GitHub-Api-Version": "2022-11-28",
 }
 
-IGNORED_REPOS = {USERNAME}  # profile repo itself
-
-# Hand-curated projects — rendered as a 2×2 card table
-CURATED = [
+CURATED_PROJECTS = [
     {
-        "owner": USERNAME,
+        "owner": "Wand-DenaXy",
         "name": "-Manueli-s-Clubes",
-        "display": "Manueli's Clubes",
-        "tagline": "Full-stack SaaS · Club Management",
-        "desc": "Real Stripe payments, async Celery webhooks, multi-tenancy, RBAC and CI with 84% coverage.",
+        "title": "Manueli's Clubes",
         "badges": [
             ("FastAPI", "009688", "fastapi", "white"),
             ("Nuxt_4", "00DC82", "nuxtdotjs", "white"),
@@ -57,15 +42,11 @@ CURATED = [
             ("Docker", "2496ED", "docker", "white"),
             ("Redis", "DC382D", "redis", "white"),
         ],
-        "snippet": "34 endpoints · 72 tests · 84% coverage\n5 Docker containers · Celery async workers\nRBAC + Multi-Tenancy · Rate limiting",
-        "ci_badge": "[![CI](https://github.com/Wand-DenaXy/-Manueli-s-Clubes/actions/workflows/ci.yml/badge.svg)](https://github.com/Wand-DenaXy/-Manueli-s-Clubes/actions)",
     },
     {
         "owner": "WeGreenProject",
         "name": "WeGreen-Main",
-        "display": "WeGreen",
-        "tagline": "Full-stack Marketplace · Sustainable Fashion",
-        "desc": "Cart + subscriptions + refunds via Stripe, dynamic commissions, 5-tier gamified ranking, Leaflet map, 25 email templates.",
+        "title": "WeGreen",
         "badges": [
             ("PHP_8", "777BB4", "php", "white"),
             ("MySQL_8", "4479A1", "mysql", "white"),
@@ -73,385 +54,356 @@ CURATED = [
             ("Leaflet", "199900", "leaflet", "white"),
             ("Bootstrap_5", "7952B3", "bootstrap", "white"),
         ],
-        "snippet": "38 controllers · 40 models · 30+ pages\n7-state return machine · Stripe Refunds\nDynamic commissions (4–6%) · Ranking tiers",
-        "ci_badge": "",
     },
     {
-        "owner": USERNAME,
+        "owner": "Wand-DenaXy",
         "name": "FederacaoV2",
-        "display": "FederaçãoV2",
-        "tagline": "Federation Management — v2",
-        "desc": "Rebuilt from scratch with multi-tenancy and RBAC architecture.",
+        "title": "FederacaoV2",
         "badges": [
             ("Laravel", "FF2D20", "laravel", "white"),
             ("MySQL", "4479A1", "mysql", "white"),
         ],
-        "snippet": "RBAC · Multi-Tenancy · MVC",
-        "ci_badge": "",
     },
     {
-        "owner": USERNAME,
+        "owner": "Wand-DenaXy",
         "name": "Flutter",
-        "display": "Flutter",
-        "tagline": "Cross-Platform Mobile",
-        "desc": "Native mobile UI patterns, state management and platform integrations.",
+        "title": "Flutter",
         "badges": [
             ("Flutter", "02569B", "flutter", "white"),
             ("Dart", "0175C2", "dart", "white"),
             ("Kotlin", "7F52FF", "kotlin", "white"),
         ],
-        "snippet": "Flutter · Dart · Kotlin",
-        "ci_badge": "",
     },
 ]
 
-# ── GitHub API helpers ────────────────────────────────────────────────────────
+PACKAGE_TYPES = ["container", "npm", "maven", "nuget", "rubygems"]
 
-def gh_get(path: str, params: dict | None = None) -> dict | list:
+
+def gh_get(path: str, params: dict | None = None) -> requests.Response:
     url = f"https://api.github.com{path}"
-    for attempt in range(3):
-        r = requests.get(url, headers=HEADERS, params=params, timeout=15)
-        if r.status_code == 403 and "rate limit" in r.text.lower():
-            reset = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
-            wait  = max(reset - int(time.time()), 1)
-            print(f"Rate limited — waiting {wait}s …")
-            time.sleep(wait)
+    for _ in range(3):
+        resp = requests.get(url, headers=HEADERS, params=params, timeout=20)
+        if resp.status_code == 403 and "rate limit" in resp.text.lower():
+            reset_at = int(resp.headers.get("X-RateLimit-Reset", time.time() + 60))
+            wait_s = max(reset_at - int(time.time()), 1)
+            print(f"Rate limited; waiting {wait_s}s")
+            time.sleep(wait_s)
             continue
-        r.raise_for_status()
-        return r.json()
-    sys.exit("GitHub API repeatedly rate-limited. Aborting.")
+        return resp
+    return resp
+
+
+def gh_json(path: str, params: dict | None = None) -> dict | list:
+    resp = gh_get(path, params)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def get_user() -> dict:
+    return gh_json(f"/users/{USERNAME}")
 
 
 def get_repos() -> list[dict]:
-    repos, page = [], 1
+    repos: list[dict] = []
+    page = 1
     while True:
-        batch = gh_get(f"/users/{USERNAME}/repos", {
-            "type": "public", "per_page": 100, "page": page,
-        })
+        batch = gh_json(
+            f"/users/{USERNAME}/repos",
+            {"type": "public", "per_page": 100, "page": page},
+        )
         if not batch:
             break
-        repos.extend(r for r in batch if not r["fork"] and r["name"] not in IGNORED_REPOS)
+        repos.extend(batch)
         if len(batch) < 100:
             break
         page += 1
     return repos
 
 
-def get_repo_languages(owner: str, name: str) -> dict[str, int]:
-    """Return {language: bytes} for a single repo."""
-    try:
-        return gh_get(f"/repos/{owner}/{name}/languages")
-    except Exception:
-        return {}
-
-
-def aggregate_languages(repos: list[dict]) -> list[tuple[str, int]]:
-    """Return sorted [(language, bytes)] across all repos."""
-    totals: dict[str, int] = {}
-    for repo in repos:
-        langs = get_repo_languages(USERNAME, repo["name"])
-        for lang, b in langs.items():
-            totals[lang] = totals.get(lang, 0) + b
-    total_bytes = sum(totals.values()) or 1
-    return sorted(totals.items(), key=lambda x: x[1], reverse=True)
-
-
-# ── Section builders ──────────────────────────────────────────────────────────
-
-LANG_BADGE_MAP = {
-    "JavaScript": ("F7DF1E", "javascript", "black"),
-    "TypeScript": ("3178C6", "typescript", "white"),
-    "HTML":       ("E34F26", "html5", "white"),
-    "CSS":        ("1572B6", "css3", "white"),
-    "Python":     ("3776AB", "python", "white"),
-    "PHP":        ("777BB4", "php", "white"),
-    "Dart":       ("0175C2", "dart", "white"),
-    "Kotlin":     ("7F52FF", "kotlin", "white"),
-    "C#":         ("239120", "csharp", "white"),
-    "Java":       ("ED8B00", "java", "white"),
-    "Shell":      ("4EAA25", "gnubash", "white"),
-    "SCSS":       ("CC6699", "sass", "white"),
-}
-
-
-def _badge(label: str, color: str, logo: str, logo_color: str) -> str:
-    label_enc = label.replace(" ", "+").replace("#", "%23").replace("/", "%2F")
+def badge(label: str, color: str, logo: str, logo_color: str) -> str:
+    safe = label.replace(" ", "+").replace("#", "%23").replace("/", "%2F")
     return (
-        f'<img src="https://img.shields.io/badge/{label_enc}-{color}'
+        f'<img src="https://img.shields.io/badge/{safe}-{color}'
         f'?style=flat-square&logo={logo}&logoColor={logo_color}" />'
     )
 
 
-def _approx_lines(b: int) -> str:
-    if b >= 1_000_000:
-        return f"{b/1_000_000:.1f}M lines"
-    if b >= 1_000:
-        return f"{b/1_000:.1f}k lines"
-    return f"{b} lines"
+def compact_number(n: int) -> str:
+    if n >= 1_000_000:
+        return f"{n/1_000_000:.2f}M"
+    if n >= 1_000:
+        return f"{n/1_000:.2f}k"
+    return str(n)
 
 
-def build_overview(repos: list[dict]) -> str:
-    print("  Aggregating language data (may take a moment) …")
-    langs = aggregate_languages(repos)
-    total_bytes = sum(b for _, b in langs) or 1
-    top = langs[:6]
+def pct(value: int, total: int) -> str:
+    if total <= 0:
+        return "0.00%"
+    return f"{(value / total) * 100:.2f}%"
 
-    stats_url = (
-        "https://github-readme-stats.vercel.app/api"
-        f"?username={USERNAME}&show_icons=true&theme=github_dark"
-        "&hide_border=true&bg_color=161b22&title_color=58A6FF"
-        "&icon_color=58A6FF&text_color=8b949e&ring_color=58A6FF"
-        "&hide=issues&count_private=true&include_all_commits=true"
-        "&custom_title=GitHub+Stats"
-    )
-    langs_url = (
-        "https://github-readme-stats.vercel.app/api/top-langs/"
-        f"?username={USERNAME}&layout=donut&theme=github_dark"
-        "&hide_border=true&bg_color=161b22&title_color=58A6FF"
-        "&text_color=8b949e&langs_count=8&custom_title=Language+Distribution"
-    )
 
-    lines = [
-        '<div align="center">',
-        "",
-        '<table width="100%">',
-        "<tr>",
-        '<td width="50%" valign="top" align="center">',
-        "",
-        f'<img src="{stats_url}" width="100%" />',
-        "",
-        "</td>",
-        '<td width="50%" valign="top" align="center">',
-        "",
-        f'<img src="{langs_url}" width="100%" />',
-        "",
-        "</td>",
-        "</tr>",
-        "</table>",
-        "",
-        "<br/>",
-        "",
-        '<table width="88%">',
-    ]
+def parse_last_page(link_header: str | None) -> int:
+    if not link_header:
+        return 1
+    m = re.search(r"[?&]page=(\d+)>; rel=\"last\"", link_header)
+    return int(m.group(1)) if m else 1
 
-    # Build rows of 3
-    cells = []
-    for lang, b in top:
-        pct = b / total_bytes * 100
-        info = LANG_BADGE_MAP.get(lang, ("888888", lang.lower(), "white"))
-        badge = _badge(lang, *info)
-        approx = _approx_lines(b)
-        cells.append(
-            f'<td align="center" width="33%">\n'
-            f"  {badge}<br/>\n"
-            f"  <sub><code>{pct:.2f}%</code> &nbsp; {approx}</sub>\n"
-            f"</td>"
+
+def count_releases(owner: str, repo: str) -> int:
+    resp = gh_get(f"/repos/{owner}/{repo}/releases", {"per_page": 1, "page": 1})
+    if resp.status_code == 404:
+        return 0
+    if resp.status_code >= 400:
+        return 0
+    data = resp.json()
+    if not data:
+        return 0
+    last_page = parse_last_page(resp.headers.get("Link"))
+    if last_page == 1:
+        return len(data)
+    last_resp = gh_get(f"/repos/{owner}/{repo}/releases", {"per_page": 1, "page": last_page})
+    if last_resp.status_code >= 400:
+        return last_page
+    return (last_page - 1) + len(last_resp.json())
+
+
+def count_packages() -> int:
+    total = 0
+    for pkg_type in PACKAGE_TYPES:
+        resp = gh_get(f"/users/{USERNAME}/packages", {"package_type": pkg_type, "per_page": 100, "page": 1})
+        if resp.status_code in (403, 404):
+            continue
+        if resp.status_code >= 400:
+            continue
+        items = resp.json()
+        total += len(items)
+        # Rare to exceed 100; if needed, paginate.
+        if len(items) == 100:
+            page = 2
+            while True:
+                r = gh_get(f"/users/{USERNAME}/packages", {"package_type": pkg_type, "per_page": 100, "page": page})
+                if r.status_code >= 400:
+                    break
+                batch = r.json()
+                if not batch:
+                    break
+                total += len(batch)
+                if len(batch) < 100:
+                    break
+                page += 1
+    return total
+
+
+def get_total_views_last_14_days(repos: list[dict]) -> int:
+    total = 0
+    for repo in repos:
+        owner = repo.get("owner", {}).get("login", USERNAME)
+        name = repo["name"]
+        resp = gh_get(f"/repos/{owner}/{name}/traffic/views")
+        if resp.status_code >= 400:
+            continue
+        payload = resp.json()
+        total += int(payload.get("count", 0))
+    return total
+
+
+def get_language_totals(repos: list[dict]) -> dict[str, int]:
+    totals: dict[str, int] = {}
+    for repo in repos:
+        owner = repo.get("owner", {}).get("login", USERNAME)
+        name = repo["name"]
+        resp = gh_get(f"/repos/{owner}/{name}/languages")
+        if resp.status_code >= 400:
+            continue
+        langs = resp.json()
+        for lang, b in langs.items():
+            totals[lang] = totals.get(lang, 0) + int(b)
+    return totals
+
+
+def get_repo_commit_count(owner: str, repo: str) -> int:
+    # Uses contributor totals as a robust commit approximation without fetching every commit detail.
+    resp = gh_get(f"/repos/{owner}/{repo}/contributors", {"per_page": 100, "anon": "true"})
+    if resp.status_code >= 400:
+        return 0
+    data = resp.json()
+    return sum(int(c.get("contributions", 0)) for c in data)
+
+
+def get_repo_file_count(owner: str, repo: str, default_branch: str) -> int:
+    resp = gh_get(f"/repos/{owner}/{repo}/git/trees/{default_branch}", {"recursive": "1"})
+    if resp.status_code >= 400:
+        return 0
+    tree = resp.json().get("tree", [])
+    return sum(1 for item in tree if item.get("type") == "blob")
+
+
+def preferred_license(repos: list[dict]) -> str:
+    counter = Counter()
+    for repo in repos:
+        lic = repo.get("license")
+        if lic and lic.get("spdx_id") and lic.get("spdx_id") != "NOASSERTION":
+            counter[lic["spdx_id"]] += 1
+    if not counter:
+        return "No preferred license"
+    return counter.most_common(1)[0][0]
+
+
+def build_overview(repos: list[dict], user: dict) -> str:
+    repo_count = int(user.get("public_repos", len(repos)))
+    stars = sum(int(r.get("stargazers_count", 0)) for r in repos)
+    forks = sum(int(r.get("forks_count", 0)) for r in repos)
+    used_mb = sum(int(r.get("size", 0)) for r in repos) / 1024.0
+
+    # subscribers_count is not present on list endpoint; fetch per-repo summary.
+    watchers = 0
+    releases = 0
+    commits = 0
+    tracked_files = 0
+    for repo in repos:
+        owner = repo.get("owner", {}).get("login", USERNAME)
+        name = repo["name"]
+
+        details_resp = gh_get(f"/repos/{owner}/{name}")
+        if details_resp.status_code < 400:
+            watchers += int(details_resp.json().get("subscribers_count", 0))
+
+        releases += count_releases(owner, name)
+        commits += get_repo_commit_count(owner, name)
+        tracked_files += get_repo_file_count(owner, name, repo.get("default_branch", "main"))
+
+    packages = count_packages()
+    views_2w = get_total_views_last_14_days(repos)
+    top_license = preferred_license(repos)
+
+    lang_totals = get_language_totals(repos)
+    total_lang_bytes = sum(lang_totals.values())
+    top_langs = sorted(lang_totals.items(), key=lambda x: x[1], reverse=True)[:5]
+
+    language_lines = []
+    for lang, b in top_langs:
+        approx_lines = int(round(b / 30.0))
+        language_lines.append(
+            f"{lang}  \n{compact_number(approx_lines)} lines  \n{pct(b, total_lang_bytes)}"
         )
 
-    # pad to even rows of 3
-    while len(cells) % 3 != 0:
-        cells.append('<td width="33%"></td>')
-
-    for i in range(0, len(cells), 3):
-        lines.append("<tr>")
-        for cell in cells[i:i+3]:
-            lines.append(cell)
-        lines.append("</tr>")
-
-    total_kb = total_bytes // 1024
-    total_repos = len(repos)
-    lines += [
-        "</table>",
+    left = [
+        f"### {repo_count} Repositories",
         "",
-        "<br/>",
-        f"<sub>{total_kb:,}kb of code · {total_repos} public repos · "
-        f"{sum(r.get('stargazers_count', 0) for r in repos)} stargazers</sub>",
-        "",
-        "</div>",
+        f"- Prefers {top_license} license",
+        f"- {releases} Releases",
+        f"- {packages} Packages",
+        f"- {used_mb:.0f} MB used",
+        "- 0 Sponsors",
+        f"- {stars} Stargazers",
+        f"- {forks} Forkers",
+        f"- {watchers} Watchers",
+        f"- {compact_number(views_2w)} views in last two weeks",
     ]
-    return "\n".join(lines)
 
-
-def build_currently(repos: list[dict]) -> str:
-    active = sorted(
-        repos,
-        key=lambda r: r.get("pushed_at") or "1970-01-01T00:00:00Z",
-        reverse=True,
-    )[:3]
-
-    now = datetime.now(tz=timezone.utc)
-    lines = [
-        "- 🔨 Deepening full-stack architecture patterns",
-        "- 📱 Shipping cross-platform mobile with Flutter",
-        "- 🎮 Exploring procedural systems in Unity",
-        "- ⚡ Automating this very profile with GitHub Actions",
+    right = [
+        f"### {len(top_langs)} Languages",
         "",
-        "**Recent pushes:**",
-    ]
-    for repo in active:
-        pushed = datetime.fromisoformat(repo["pushed_at"].replace("Z", "+00:00"))
-        delta  = now - pushed
-        if delta.days == 0:
-            age = "today"
-        elif delta.days == 1:
-            age = "yesterday"
-        else:
-            age = f"{delta.days}d ago"
-        lines.append(f"- [`{repo['name']}`]({repo['html_url']}) — {age}")
+        "Most used languages",
+        "",
+        (
+            f"estimation from {used_mb:.0f}mb of code in {tracked_files} edited files "
+            f"across {commits} commits"
+        ),
+        "",
+    ] + language_lines
 
-    return "\n".join(lines)
-
-
-def _render_project_card(p: dict) -> str:
-    url = f"https://github.com/{p['owner']}/{p['name']}"
-    badge_imgs = " ".join(
-        _badge(label, color, logo, lc)
-        for label, color, logo, lc in p["badges"]
-    )
-    snippet_block = "\n".join(f"```\n{p['snippet']}\n```".split("\\n"))
-    ci = f"\n\n{p['ci_badge']}" if p["ci_badge"] else ""
-    return (
-        f"### [{p['display']}]({url})\n"
-        f"**{p['tagline']}**\n\n"
-        f"{p['desc']}\n\n"
-        f"{badge_imgs}\n\n"
-        f"```\n{p['snippet']}\n```"
-        f"{ci}"
+    return "\n".join(
+        [
+            '<div align="center">',
+            "",
+            '<table width="100%">',
+            "<tr>",
+            '<td width="50%" valign="top" align="left">',
+            *left,
+            "</td>",
+            '<td width="50%" valign="top" align="left">',
+            *right,
+            "</td>",
+            "</tr>",
+            "</table>",
+            "",
+            "</div>",
+        ]
     )
 
 
-def build_projects(repos: list[dict]) -> str:
-    curated_names = {c["name"] for c in CURATED}
-
-    # Build the 2×2 fixed table
-    cards = [_render_project_card(p) for p in CURATED]
-    # Pad to even count
-    if len(cards) % 2 != 0:
-        cards.append("")
+def build_projects() -> str:
+    cards = []
+    for p in CURATED_PROJECTS:
+        url = f"https://github.com/{p['owner']}/{p['name']}"
+        badges = " ".join(badge(*b) for b in p["badges"])
+        cards.append(
+            "\n".join([
+                f"### [{p['title']}]({url})",
+                badges,
+            ])
+        )
 
     rows = []
     for i in range(0, len(cards), 2):
-        left  = cards[i]
+        left = cards[i]
         right = cards[i + 1] if i + 1 < len(cards) else ""
         rows.append(
-            f'<tr>\n<td width="50%" valign="top">\n\n{left}\n\n</td>\n'
-            f'<td width="50%" valign="top">\n\n{right}\n\n</td>\n</tr>'
+            "\n".join([
+                "<tr>",
+                '<td width="50%" valign="top">',
+                "",
+                left,
+                "",
+                "</td>",
+                '<td width="50%" valign="top">',
+                "",
+                right,
+                "",
+                "</td>",
+                "</tr>",
+            ])
         )
 
-    # Append extra high-starred repos not in curated list
-    extras = sorted(
-        [r for r in repos if r["stargazers_count"] > 0 and r["name"] not in curated_names],
-        key=lambda r: r["stargazers_count"],
-        reverse=True,
-    )[:2]
-
-    extra_rows = ""
-    if extras:
-        ecards = []
-        for repo in extras:
-            lang  = repo.get("language") or "—"
-            badge = _badge(lang, LANG_BADGE_MAP.get(lang, ("888888", lang.lower(), "white"))[0], lang.lower(), "white")
-            desc  = (repo.get("description") or "—")[:80]
-            ecards.append(
-                f"### [{repo['name']}]({repo['html_url']})\n\n"
-                f"{desc}\n\n{badge}\n\n"
-                f"⭐ {repo['stargazers_count']}"
-            )
-        if len(ecards) % 2 != 0:
-            ecards.append("")
-        for i in range(0, len(ecards), 2):
-            left  = ecards[i]
-            right = ecards[i + 1] if i + 1 < len(ecards) else ""
-            rows.append(
-                f'<tr>\n<td width="50%" valign="top">\n\n{left}\n\n</td>\n'
-                f'<td width="50%" valign="top">\n\n{right}\n\n</td>\n</tr>'
-            )
-
-    table = '<div align="center">\n\n<table width="100%">\n' + "\n".join(rows) + "\n</table>\n\n</div>"
-    return table
-
-
-def build_waka() -> str:
-    """Return a WakaTime coding-time section if the API key is configured."""
-    if not WAKA_KEY:
-        return "> WakaTime not yet connected — see [SETUP.md](SETUP.md) to enable live coding-time stats."
-
-    try:
-        r = requests.get(
-            "https://wakatime.com/api/v1/users/current/stats/last_7_days",
-            headers={"Authorization": f"Basic {WAKA_KEY}"},
-            timeout=10,
-        )
-        r.raise_for_status()
-        data = r.json().get("data", {})
-    except Exception as e:
-        print(f"  [WARN] WakaTime API error: {e}")
-        return "> WakaTime data temporarily unavailable."
-
-    total_sec = data.get("total_seconds", 0)
-    hrs  = int(total_sec // 3600)
-    mins = int((total_sec % 3600) // 60)
-
-    langs = data.get("languages", [])[:5]
-    lang_lines = [
-        f"| {l['name']} | {l['text']} | {l['percent']:.1f}% |"
-        for l in langs
-    ]
-
-    lines = [
-        f"**Last 7 days** — `{hrs}h {mins}m`",
+    return "\n".join([
+        '<div align="center">',
         "",
-        "| Language | Time | % |",
-        "|----------|------|---|",
-    ] + lang_lines
+        '<table width="100%">',
+        *rows,
+        "</table>",
+        "",
+        "</div>",
+    ])
 
-    return "\n".join(lines)
-
-
-# ── README injection ──────────────────────────────────────────────────────────
 
 def inject_section(content: str, name: str, new_body: str) -> str:
-    pattern = (
-        rf"(<!-- START_SECTION:{re.escape(name)} -->)"
-        r".*?"
-        rf"(<!-- END_SECTION:{re.escape(name)} -->)"
-    )
-    replacement = rf"\1\n{new_body}\n\2"
-    updated, n = re.subn(pattern, replacement, content, flags=re.DOTALL)
+    pattern = rf"(<!-- START_SECTION:{re.escape(name)} -->).*?(<!-- END_SECTION:{re.escape(name)} -->)"
+    repl = rf"\1\n{new_body}\n\2"
+    updated, n = re.subn(pattern, repl, content, flags=re.DOTALL)
     if n == 0:
-        print(f"  [WARN] section '{name}' not found in README — skipping")
+        print(f"[WARN] marker not found for section: {name}")
     return updated
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
-
 def main() -> None:
     if not TOKEN:
-        sys.exit("GH_TOKEN is not set. Export it before running.")
+        sys.exit("GH_TOKEN is not set.")
 
-    print(f"Fetching repos for {USERNAME} …")
+    print(f"Loading GitHub data for {USERNAME}...")
+    user = get_user()
     repos = get_repos()
-    print(f"  Found {len(repos)} public repos")
 
-    with open(README, encoding="utf-8") as f:
+    with open(README, "r", encoding="utf-8") as f:
         content = f.read()
 
-    print("Injecting section: currently …")
-    content = inject_section(content, "currently", build_currently(repos))
-
-    print("Injecting section: overview …")
-    content = inject_section(content, "overview", build_overview(repos))
-
-    print("Injecting section: projects …")
-    content = inject_section(content, "projects", build_projects(repos))
-
-    print("Injecting section: waka …")
-    content = inject_section(content, "waka", build_waka())
+    content = inject_section(content, "overview", build_overview(repos, user))
+    content = inject_section(content, "projects", build_projects())
 
     with open(README, "w", encoding="utf-8") as f:
         f.write(content)
 
-    print("Done — README.md updated.")
+    print("README updated successfully.")
 
 
 if __name__ == "__main__":
