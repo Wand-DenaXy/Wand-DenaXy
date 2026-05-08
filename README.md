@@ -17,13 +17,8 @@
 
 <h2>Manuel Silvestre</h2>
 
-<p>
-  - Full stack Engineer<br/>
-  - Back end Engineer
-</p>
-
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=false&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Building+products+that+scale.;SaaS+%C2%B7+Payments+%C2%B7+Multi-Tenancy;From+schema+to+pixel." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=false&vCenter=true&width=720&lines=Manuel+Silvestre;Full-Stack+Engineer;Back-End+Engineer;From+schema+to+pixel." alt="Typing SVG" />
 </a>
 
 <p><strong>Full-Stack Engineer building SaaS, payments and production systems.</strong></p>
@@ -86,6 +81,10 @@
 <!-- START_SECTION:overview -->
 <div align="center">
 
+<table width="92%">
+<tr>
+<td width="40%" valign="top" align="center">
+
 ### 21 Repositories
 
 | Metric | Value |
@@ -100,7 +99,8 @@
 | Watchers | `8` |
 | Views (14d) | `0` |
 
-<br/>
+</td>
+<td width="60%" valign="top" align="center">
 
 ### 5 Languages
 
@@ -115,6 +115,10 @@
 | **CSS** | 13.99k lines | 13.71% | `██░░░░░░░░░░░░░░░░` |
 | **HTML** | 9.26k lines | 9.07% | `██░░░░░░░░░░░░░░░░` |
 | **Vue** | 5.59k lines | 5.48% | `█░░░░░░░░░░░░░░░░░` |
+
+</td>
+</tr>
+</table>
 
 </div>
 <!-- END_SECTION:overview -->
