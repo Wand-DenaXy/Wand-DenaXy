@@ -81,10 +81,6 @@
 <!-- START_SECTION:overview -->
 <div align="center">
 
-<table width="92%">
-<tr>
-<td width="40%" valign="top" align="center">
-
 ### 21 Repositories
 
 | Metric | Value |
@@ -100,8 +96,7 @@
 | Views (14d) | `0` |
 | Commits (7d) | `0` |
 
-</td>
-<td width="60%" valign="top" align="center">
+<br/>
 
 ### 5 Languages
 
@@ -116,10 +111,6 @@
 | **CSS** | 13.99k lines | 13.71% | `██░░░░░░░░░░░░░░░░` |
 | **HTML** | 9.26k lines | 9.07% | `██░░░░░░░░░░░░░░░░` |
 | **Vue** | 5.59k lines | 5.48% | `█░░░░░░░░░░░░░░░░░` |
-
-</td>
-</tr>
-</table>
 
 </div>
 <!-- END_SECTION:overview -->
