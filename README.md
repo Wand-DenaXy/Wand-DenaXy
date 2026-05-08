@@ -60,16 +60,7 @@
 </td>
 <td width="50%" valign="top">
 
-### 5 Languages
-**Most used languages**
-
-estimation from 12mb of code in 1613 edited files across 381 commits
-
-- JavaScript — 13.4k lines — 56.85%
-- Python — 1.90k lines — 8.07%
-- Shell — 937 lines — 3.2%
-- HTML — 4.54k lines — 24.49%
-- CSS — 2.96k lines — 7.39%
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Wand-DenaXy&layout=compact&theme=github_dark&hide_border=true&bg_color=161b22&title_color=58A6FF&text_color=8b949e&langs_count=8&custom_title=Language+Distribution" width="100%" />
 
 </td>
 </tr>
