@@ -40,6 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: Wand-DenaXy
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: python scripts/update_readme.py
 
       - name: Commit changes
