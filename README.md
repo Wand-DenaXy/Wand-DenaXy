@@ -19,19 +19,31 @@
 
 <br/>
 
-<p align="center">
-  <a href="mailto:manuelsil754@outlook.pt"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=microsoftoutlook&logoColor=58A6FF" /></a>&nbsp;
-  <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=25D366" /></a>&nbsp;
-  <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf"><img src="https://img.shields.io/badge/Résumé-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
-</p>
+<table width="84%">
+<tr>
+<td align="center" width="33%">
+<sub>Focus</sub><br/>
+<strong>Product Engineering</strong><br/>
+<sub>web · mobile · interactive systems</sub>
+</td>
+<td align="center" width="33%">
+<sub>Core</sub><br/>
+<strong>Backend · SaaS · Payments</strong><br/>
+<sub>PHP · Python · FastAPI · Laravel · Stripe</sub>
+</td>
+<td align="center" width="33%">
+<sub>Architecture</sub><br/>
+<strong>RBAC · Multi-Tenancy · CI/CD</strong><br/>
+<sub>REST APIs · Docker · Redis · automation</sub>
+</td>
+</tr>
+</table>
 
 <br/>
 
-```
-  Full-Stack · Mobile · Game Dev · Product Engineering
-  PHP · Laravel · Python · FastAPI · Nuxt · Flutter · Unity
-  Stripe · RBAC · Multi-Tenancy · REST APIs · Docker · CI/CD
-```
+<sub>
+  deliberate systems, real integrations, production-minded delivery
+</sub>
 
 </div>
 

@@ -25,6 +25,8 @@ Go to **GitHub → Settings → Developer settings → Personal access tokens �
 
 - **Repository access:** Only `Wand-DenaXy/Wand-DenaXy`
 - **Permissions:** `Contents → Read and write`
+- **Permissions:** `Metadata → Read-only`
+- **Permissions:** `Workflows → Read and write`
 
 Copy the token.
 
@@ -35,8 +37,10 @@ Go to **Settings → Secrets and variables → Actions → New repository secret
 | Name | Value |
 |------|-------|
 | `GH_TOKEN` | *your token from step 1* |
+| `WAKATIME_API_KEY` | *optional, only if you want live coding-time stats* |
 
 > `GITHUB_TOKEN` (built-in) is used for committing back; `GH_TOKEN` (your PAT) is used for reading all public repos without hitting anonymous rate limits.
+> Do not paste the token into `README.md`, workflow files, or commit history. Store it only as a repository secret.
 
 ### 3. Push to main
 
@@ -47,8 +51,9 @@ The workflow runs automatically on push, every day at midnight UTC, and on `work
 | Section marker | What gets updated |
 |----------------|-------------------|
 | `currently` | Static intent lines + 3 most recently pushed repos with time delta |
-| `projects` | Curated table + any high-starred extras found automatically |
-| `stats` | Served live by `github-readme-stats` CDN — no update needed |
+| `overview` | Repo stats + language distribution + language breakdown |
+| `projects` | Premium project cards + any high-starred extras found automatically |
+| `waka` | WakaTime coding-time stats when `WAKATIME_API_KEY` is configured |
 
 The script uses comment markers to inject content:
 
