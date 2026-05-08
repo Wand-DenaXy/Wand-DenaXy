@@ -46,37 +46,33 @@
 <table width="100%">
 <tr>
 <td width="47%" valign="top" align="left">
+### 22 Repositories
 
-### 15 Repositories
-
-<img src="https://img.shields.io/badge/Repositories-15-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/License-GPL--3.0-161b22?style=for-the-badge&logo=law&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Releases-2-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Repositories-22-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/License-No%20preferred%20license-161b22?style=for-the-badge&logo=law&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Releases-0-161b22?style=for-the-badge&logo=semanticrelease&logoColor=58A6FF" />
 <img src="https://img.shields.io/badge/Packages-0-161b22?style=for-the-badge&logo=githubpackages&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Used-247%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Used-278%20MB-161b22?style=for-the-badge&logo=databricks&logoColor=58A6FF" />
 <img src="https://img.shields.io/badge/Sponsors-0-161b22?style=for-the-badge&logo=githubsponsors&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Stargazers-25-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Forkers-3-161b22?style=for-the-badge&logo=git&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Watchers-5-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
-<img src="https://img.shields.io/badge/Views%20(14d)-1.40k-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF" />
-
+<img src="https://img.shields.io/badge/Stargazers-3-161b22?style=for-the-badge&logo=starship&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Forkers-1-161b22?style=for-the-badge&logo=git&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Watchers-8-161b22?style=for-the-badge&logo=github&logoColor=58A6FF" />
+<img src="https://img.shields.io/badge/Views%20(14d)-0-161b22?style=for-the-badge&logo=simpleanalytics&logoColor=58A6FF" />
 </td>
 <td width="53%" valign="top" align="left">
-
 ### 5 Languages
 
 **Most used languages**
 
-<sub>estimation from 12mb of code in 1613 edited files across 381 commits</sub>
+<sub>estimation from 278mb of code in 2213 edited files across 738 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **JavaScript** | 13.4k lines | 56.85% | `██████████░░░░░░░░` |
-| **HTML** | 4.54k lines | 24.49% | `████░░░░░░░░░░░░░░` |
-| **Python** | 1.90k lines | 8.07% | `█░░░░░░░░░░░░░░░░░` |
-| **CSS** | 2.96k lines | 7.39% | `█░░░░░░░░░░░░░░░░░` |
-| **Shell** | 937 lines | 3.20% | `█░░░░░░░░░░░░░░░░░` |
-
+| **PHP** | 36.79k lines | 36.03% | `██████░░░░░░░░░░░░` |
+| **JavaScript** | 19.74k lines | 19.33% | `███░░░░░░░░░░░░░░░` |
+| **CSS** | 13.99k lines | 13.70% | `██░░░░░░░░░░░░░░░░` |
+| **HTML** | 9.26k lines | 9.07% | `██░░░░░░░░░░░░░░░░` |
+| **Vue** | 5.59k lines | 5.47% | `█░░░░░░░░░░░░░░░░░` |
 </td>
 </tr>
 </table>
