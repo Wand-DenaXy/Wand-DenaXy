@@ -86,7 +86,7 @@
 <!-- START_SECTION:overview -->
 <div align="center">
 
-### 15 Repositories
+### 21 Repositories
 
 | Metric | Value |
 |---|---:|
@@ -95,10 +95,10 @@
 | Packages | `0` |
 | Used Space | `278 MB` |
 | Sponsors | `0` |
-| Stargazers | `25` |
-| Forkers | `3` |
-| Watchers | `5` |
-| Views (14d) | `1.40k` |
+| Stargazers | `3` |
+| Forkers | `1` |
+| Watchers | `8` |
+| Views (14d) | `0` |
 
 <br/>
 
@@ -106,15 +106,15 @@
 
 **Most used languages**
 
-<sub>estimation from 278mb of code in 2213 edited files across 738 commits</sub>
+<sub>estimation from 278mb of code in 2213 edited files across 748 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **JavaScript** | 13.4k lines | 56.85% | `███████████░░░░░░░` |
-| **HTML** | 4.54k lines | 24.49% | `█████░░░░░░░░░░░░░` |
-| **Python** | 1.90k lines | 8.07% | `██░░░░░░░░░░░░░░░░` |
-| **CSS** | 2.96k lines | 7.39% | `█░░░░░░░░░░░░░░░░░` |
-| **Shell** | 937 lines | 3.20% | `█░░░░░░░░░░░░░░░░░` |
+| **PHP** | 36.79k lines | 36.05% | `██████░░░░░░░░░░░░` |
+| **JavaScript** | 19.74k lines | 19.34% | `███░░░░░░░░░░░░░░░` |
+| **CSS** | 13.99k lines | 13.71% | `██░░░░░░░░░░░░░░░░` |
+| **HTML** | 9.26k lines | 9.07% | `██░░░░░░░░░░░░░░░░` |
+| **Vue** | 5.59k lines | 5.48% | `█░░░░░░░░░░░░░░░░░` |
 
 </div>
 <!-- END_SECTION:overview -->
