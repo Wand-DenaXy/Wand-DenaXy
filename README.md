@@ -51,15 +51,15 @@
       <sub>REST APIs · Docker · Redis · automation</sub>
     </td>
   </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <br/>
+      <a href="mailto:manelocassil69@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=microsoftoutlook&logoColor=58A6FF" /></a>&nbsp;
+      <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=25D366" /></a>&nbsp;
+      <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf"><img src="https://img.shields.io/badge/CV-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
+    </td>
+  </tr>
 </table>
-
-<br/>
-
-<p align="left">
-  <a href="mailto:manuelsil754@outlook.pt"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=microsoftoutlook&logoColor=58A6FF" /></a>&nbsp;
-  <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=25D366" /></a>&nbsp;
-  <a href="https://github.com/user-attachments/files/18594778/ManuelSilvestre_Curriclo.pdf"><img src="https://img.shields.io/badge/Résumé-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
-</p>
 
 </td>
 <td width="36%" valign="middle" align="center">
@@ -81,6 +81,10 @@
 <!-- START_SECTION:overview -->
 <div align="center">
 
+<table width="92%">
+<tr>
+<td width="40%" valign="top" align="center">
+
 ### 21 Repositories
 
 | Metric | Value |
@@ -96,7 +100,8 @@
 | Views (14d) | `0` |
 | Commits (7d) | `0` |
 
-<br/>
+</td>
+<td width="60%" valign="top" align="center">
 
 ### 5 Languages
 
@@ -111,6 +116,10 @@
 | **CSS** | 13.99k lines | 13.71% | `██░░░░░░░░░░░░░░░░` |
 | **HTML** | 9.26k lines | 9.07% | `██░░░░░░░░░░░░░░░░` |
 | **Vue** | 5.59k lines | 5.48% | `█░░░░░░░░░░░░░░░░░` |
+
+</td>
+</tr>
+</table>
 
 </div>
 <!-- END_SECTION:overview -->

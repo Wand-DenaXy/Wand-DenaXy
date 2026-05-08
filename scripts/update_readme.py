@@ -358,8 +358,14 @@ def build_overview(repos: list[dict], user: dict) -> str:
             + f"**{lang}** | {compact_number(approx_lines)} lines | {pct(b, total_lang_bytes)} | `{meter(b, total_lang_bytes)}` |"
         )
 
+    lang_sub = f"<sub>estimation from {int(round(used_mb))}mb of code in {tracked_files} edited files across {commits} commits</sub>"
+
     return "\n".join([
         '<div align="center">',
+        "",
+        '<table width="92%">',
+        "<tr>",
+        '<td width="40%" valign="top" align="center">',
         "",
         f"### {repo_count} Repositories",
         "",
@@ -376,20 +382,22 @@ def build_overview(repos: list[dict], user: dict) -> str:
         f"| Views (14d) | `{compact_number(views_2w)}` |",
         f"| Commits (7d) | `{commits_7d}` |",
         "",
-        "<br/>",
+        "</td>",
+        '<td width="60%" valign="top" align="center">',
         "",
         f"### {len(top_langs)} Languages",
         "",
         "**Most used languages**",
         "",
-        (
-            f"<sub>estimation from {int(round(used_mb))}mb of code in {tracked_files} edited files "
-            f"across {commits} commits</sub>"
-        ),
+        lang_sub,
         "",
         "| Language | Lines | Share | Distribution |",
         "|---|---:|---:|---|",
         *language_rows,
+        "",
+        "</td>",
+        "</tr>",
+        "</table>",
         "",
         "</div>",
     ])
