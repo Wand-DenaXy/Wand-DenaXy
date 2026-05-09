@@ -84,7 +84,7 @@
 <tr>
 <td width="40%" valign="top" align="center">
 
-### 22 Repositories
+### 21 Repositories
 
 | Metric | Value |
 |---|---:|
@@ -106,7 +106,7 @@
 
 **Most used languages**
 
-<sub>estimation from 278mb of code in 2213 edited files across 760 commits</sub>
+<sub>estimation from 278mb of code in 2213 edited files across 761 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
