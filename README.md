@@ -106,7 +106,7 @@
 
 **Most used languages**
 
-<sub>estimation from 278mb of code in 2213 edited files across 764 commits</sub>
+<sub>estimation from 278mb of code in 2213 edited files across 765 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
