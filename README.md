@@ -56,7 +56,7 @@
       <br/>
       <a href="mailto:manelocassil69@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=gmail&logoColor=ffffff" /></a>&nbsp;
       <a href="https://wa.me/920170871"><img src="https://img.shields.io/badge/WhatsApp-0d1117?style=flat-square&logo=whatsapp&logoColor=ffffff" /></a>&nbsp;
-      <a href="https://www.linkedin.com/in/manuel-silvestre-6511b4353/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=ffffff" /></a>&nbsp;
+      <a href="https://www.linkedin.com/in/manuel-silvestre-6511b4353/"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&labelColor=0A66C2&logo=linkedin&logoColor=white" /></a>&nbsp;
       <a href="https://github.com/user-attachments/files/27531128/Manuel_Silvestre_Curriclo_Ingles.pdf"><img src="https://img.shields.io/badge/CV-0d1117?style=flat-square&logo=readthedocs&logoColor=ffffff" /></a>
   </tr>
 </table>
