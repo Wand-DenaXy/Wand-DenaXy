@@ -92,13 +92,13 @@
 | License | `No preferred license` |
 | Releases | `0` |
 | Packages | `0` |
-| Used Space | `278 MB` |
+| Used Space | `306 MB` |
 | Sponsors | `0` |
 | Stargazers | `3` |
 | Forkers | `1` |
 | Watchers | `8` |
 | Views (14d) | `0` |
-| Commits (7d) | `39` |
+| Commits (7d) | `41` |
 
 </td>
 <td width="60%" valign="top" align="center">
@@ -107,15 +107,15 @@
 
 **Most used languages**
 
-<sub>estimation from 278mb of code in 2235 edited files across 785 commits</sub>
+<sub>estimation from 306mb of code in 2254 edited files across 789 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **PHP** | 36.79k lines | 35.61% | `██████░░░░░░░░░░░░` |
-| **JavaScript** | 19.86k lines | 19.22% | `███░░░░░░░░░░░░░░░` |
-| **CSS** | 14.52k lines | 14.05% | `███░░░░░░░░░░░░░░░` |
-| **HTML** | 9.85k lines | 9.54% | `██░░░░░░░░░░░░░░░░` |
-| **Vue** | 5.59k lines | 5.41% | `█░░░░░░░░░░░░░░░░░` |
+| **PHP** | 36.79k lines | 34.29% | `██████░░░░░░░░░░░░` |
+| **JavaScript** | 20.89k lines | 19.47% | `████░░░░░░░░░░░░░░` |
+| **CSS** | 15.95k lines | 14.86% | `███░░░░░░░░░░░░░░░` |
+| **HTML** | 11.37k lines | 10.60% | `██░░░░░░░░░░░░░░░░` |
+| **Vue** | 5.59k lines | 5.21% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
