@@ -98,7 +98,7 @@
 | Forkers | `1` |
 | Watchers | `8` |
 | Views (14d) | `0` |
-| Commits (7d) | `3` |
+| Commits (7d) | `1` |
 
 </td>
 <td width="60%" valign="top" align="center">
@@ -107,7 +107,7 @@
 
 **Most used languages**
 
-<sub>estimation from 306mb of code in 2254 edited files across 794 commits</sub>
+<sub>estimation from 306mb of code in 2254 edited files across 795 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
