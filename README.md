@@ -107,15 +107,15 @@
 
 **Most used languages**
 
-<sub>estimation from 306mb of code in 1994 edited files across 671 commits</sub>
+<sub>estimation from 306mb of code in 1242 edited files across 437 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **PHP** | 36.79k lines | 34.29% | `██████░░░░░░░░░░░░` |
-| **JavaScript** | 20.89k lines | 19.47% | `████░░░░░░░░░░░░░░` |
-| **CSS** | 15.95k lines | 14.86% | `███░░░░░░░░░░░░░░░` |
-| **HTML** | 11.37k lines | 10.60% | `██░░░░░░░░░░░░░░░░` |
-| **Vue** | 5.59k lines | 5.21% | `█░░░░░░░░░░░░░░░░░` |
+| **PHP** | 32.49k lines | 48.95% | `█████████░░░░░░░░░` |
+| **CSS** | 10.55k lines | 15.89% | `███░░░░░░░░░░░░░░░` |
+| **JavaScript** | 8.75k lines | 13.19% | `██░░░░░░░░░░░░░░░░` |
+| **HTML** | 7.69k lines | 11.58% | `██░░░░░░░░░░░░░░░░` |
+| **C** | 5.37k lines | 8.09% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
