@@ -103,7 +103,7 @@
 </td>
 <td width="60%" valign="top" align="center">
 
-### 5 Languages
+### 0 Languages
 
 **Most used languages**
 
@@ -111,11 +111,6 @@
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **PHP** | 32.49k lines | 48.95% | `█████████░░░░░░░░░` |
-| **CSS** | 10.55k lines | 15.89% | `███░░░░░░░░░░░░░░░` |
-| **JavaScript** | 8.75k lines | 13.19% | `██░░░░░░░░░░░░░░░░` |
-| **HTML** | 7.69k lines | 11.58% | `██░░░░░░░░░░░░░░░░` |
-| **C** | 5.37k lines | 8.09% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
