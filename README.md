@@ -96,7 +96,7 @@
 | Sponsors | `0` |
 | Stargazers | `4` |
 | Forkers | `1` |
-| Watchers | `8` |
+| Watchers | `2` |
 | Views (14d) | `0` |
 | Commits (7d) | `0` |
 
@@ -107,7 +107,7 @@
 
 **Most used languages**
 
-<sub>estimation from 306mb of code in 2254 edited files across 924 commits</sub>
+<sub>estimation from 306mb of code in 1190 edited files across 416 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
