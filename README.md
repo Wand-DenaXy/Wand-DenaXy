@@ -103,19 +103,14 @@
 </td>
 <td width="60%" valign="top" align="center">
 
-### 5 Languages
+### 0 Languages
 
 **Most used languages**
 
-<sub>estimation from 306mb of code in 1242 edited files across 437 commits</sub>
+<sub>estimation from 306mb of code in 1199 edited files across 433 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **PHP** | 34.68k lines | 33.82% | `██████░░░░░░░░░░░░` |
-| **JavaScript** | 20.89k lines | 20.37% | `████░░░░░░░░░░░░░░` |
-| **CSS** | 14.79k lines | 14.42% | `███░░░░░░░░░░░░░░░` |
-| **HTML** | 10.55k lines | 10.29% | `██░░░░░░░░░░░░░░░░` |
-| **Vue** | 5.59k lines | 5.45% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
