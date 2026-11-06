@@ -96,26 +96,21 @@
 | Sponsors | `0` |
 | Stargazers | `4` |
 | Forkers | `1` |
-| Watchers | `3` |
+| Watchers | `7` |
 | Views (14d) | `0` |
 | Commits (7d) | `0` |
 
 </td>
 <td width="60%" valign="top" align="center">
 
-### 5 Languages
+### 0 Languages
 
 **Most used languages**
 
-<sub>estimation from 306mb of code in 1199 edited files across 433 commits</sub>
+<sub>estimation from 306mb of code in 2092 edited files across 946 commits</sub>
 
 | Language | Lines | Share | Distribution |
 |---|---:|---:|---|
-| **PHP** | 36.79k lines | 34.29% | `██████░░░░░░░░░░░░` |
-| **JavaScript** | 20.89k lines | 19.47% | `████░░░░░░░░░░░░░░` |
-| **CSS** | 15.95k lines | 14.86% | `███░░░░░░░░░░░░░░░` |
-| **HTML** | 11.37k lines | 10.60% | `██░░░░░░░░░░░░░░░░` |
-| **Vue** | 5.59k lines | 5.21% | `█░░░░░░░░░░░░░░░░░` |
 
 </td>
 </tr>
